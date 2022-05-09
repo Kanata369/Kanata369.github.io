@@ -87,7 +87,7 @@
 <meta property="og:description" content="前置知识:并查集的基本操作">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-01T04:33:21.000Z">
-<meta property="article:modified_time" content="2022-05-02T07:23:10.762Z">
+<meta property="article:modified_time" content="2022-05-09T10:11:19.379Z">
 <meta property="article:author" content="Kanata">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
@@ -353,6 +353,10 @@
 <p>假设三个点，1和2是敌人，2和3是敌人</p>
 <p>则1与3通过2+3相连，属于同一个集合，即朋友</p>
 <hr>
+<h1 id="带权并查集"><a href="#带权并查集" class="headerlink" title="带权并查集:"></a>带权并查集:</h1><p>并查集中的点、边带权值时，便使用带权并查集，通常使用val[i]来存储i到其父节点路径上的<strong>权值和</strong>,用size[i]维护i作父节点时，其集合节点总数</p>
+<p>模板题:<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1196">https://www.luogu.com.cn/problem/P1196</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">init</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        fa[i]=i;</span><br><span class="line">        size[i]=<span class="number">1</span>;</span><br><span class="line">        val[i]=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x==fa[x]) <span class="keyword">return</span> x;</span><br><span class="line">    <span class="type">int</span> A=<span class="built_in">find</span>(fa[x]);</span><br><span class="line">    val[x]+=val[fa[x]];</span><br><span class="line">    <span class="keyword">return</span> fa[x]=A;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">ask</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> xx=<span class="built_in">find</span>(x),yy=<span class="built_in">find</span>(y);</span><br><span class="line">    <span class="keyword">if</span>(xx!=yy) <span class="keyword">return</span> <span class="number">-1</span>;<span class="comment">//二者不在一个集合内</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">abs</span>(val[x]-val[y])<span class="number">-1</span>;<span class="comment">//返回二者之间节点数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span><span class="comment">//x所在集合指向y所在集合</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> xx=<span class="built_in">find</span>(x),yy=<span class="built_in">find</span>(y);</span><br><span class="line">    <span class="keyword">if</span>(xx!=yy)</span><br><span class="line">    &#123;</span><br><span class="line">        val[xx]=size[yy];</span><br><span class="line">        size[yy]+=size[xx];</span><br><span class="line">        fa[xx]=yy;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>find中，在路径压缩的同时，更新val[x]的值(新的val值为其旧父节点的新val值+其到旧父节点的val值)</p>
 
       
     </div>
@@ -392,6 +396,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/05/08/CF1473C/" rel="prev" title="1473C">
+                1473C <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -468,7 +476,7 @@
               
                 <a href="/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -533,7 +541,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="nav-number">1.</span> <span class="nav-text">基础并查集:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A7%8D%E7%B1%BB%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">种类并查集:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="nav-number">1.</span> <span class="nav-text">基础并查集:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A7%8D%E7%B1%BB%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">种类并查集:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%A6%E6%9D%83%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="nav-number">3.</span> <span class="nav-text">带权并查集:</span></a></li></ol></div>
             
 
           </div>
