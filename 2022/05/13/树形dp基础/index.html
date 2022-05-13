@@ -87,7 +87,7 @@
 <meta property="og:description" content="即状态转移关系以树形结构为基础的dp 例题1：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;UVA1292 以最少的点覆盖整颗树，则dp[i][1]表示覆盖以i为根的树，选择了i节点的最少节点数，dp[i][0]则表示没选择i节点的最少节点数 123456789101112131415void dfs(int u,int fa)&amp;#123;    dp[u][1]&#x3D;1;">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-13T15:57:50.000Z">
-<meta property="article:modified_time" content="2022-05-13T17:12:08.675Z">
+<meta property="article:modified_time" content="2022-05-13T17:55:08.775Z">
 <meta property="article:author" content="Kanata">
 <meta property="article:tag" content="dp">
 <meta name="twitter:card" content="summary">
@@ -360,9 +360,9 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    sz[u]=<span class="number">1</span>;</span><br><span class="line">    dp[u][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    dp[u][<span class="number">1</span>]=val[u];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;g[u].<span class="built_in">size</span>();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> v=g[u][i];</span><br><span class="line">        <span class="built_in">dfs</span>(v);</span><br><span class="line">        <span class="keyword">for</span>(ll j=<span class="built_in">min</span>(N+<span class="number">1</span>,sz[u]+sz[v]);j&gt;<span class="number">1</span>;j--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(ll k=<span class="built_in">max</span>(<span class="number">0</span>,j-sz[u]);k&lt;=<span class="built_in">min</span>(j,sz[v]);k++)</span><br><span class="line">            &#123;</span><br><span class="line">                dp[u][j]=<span class="built_in">max</span>(dp[u][j],dp[u][j-k]+dp[v][k]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sz[u]+=sz[v];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>优化后时间复杂度转为<script type="math/tex">O(n^{2})</script></p>
 <p>大致计算如下：考虑以u为根节点的子树，其子节点为v1、v2….</p>
-<p>则合并时t=size[v1]<em>size[v1]+(size[v1]+size[v2])\</em>size[v2]+…</p>
+<p>则合并时t=size[v1]*size[v1]+(size[v1]+size[v2])*size[v2]+…</p>
 <p>t=size[u]*size[u]</p>
-<p>其子节点合并复杂度为size[v]*size[v]，远小于t，递归下去，复杂度为O(n^{2})</p>
+<p>其子节点合并复杂度为size[v]*size[v]，远小于t，递归下去，复杂度为<script type="math/tex">O(n^{2})</script></p>
 <p>感觉还是不太理解orz</p>
 <p>参考：</p>
 <p><a target="_blank" rel="noopener" href="https://ouuan.github.io/post/%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E7%9A%84%E4%B8%8A%E4%B8%8B%E7%95%8C%E4%BC%98%E5%8C%96/">https://ouuan.github.io/post/%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E7%9A%84%E4%B8%8A%E4%B8%8B%E7%95%8C%E4%BC%98%E5%8C%96/</a></p>
