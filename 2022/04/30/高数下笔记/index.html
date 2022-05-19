@@ -90,7 +90,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1913).png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/屏幕截图(1914).png">
 <meta property="article:published_time" content="2022-04-30T08:31:35.000Z">
-<meta property="article:modified_time" content="2022-04-30T08:31:26.162Z">
+<meta property="article:modified_time" content="2022-05-19T10:24:43.852Z">
 <meta property="article:author" content="Kanata">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1912).png">
@@ -538,13 +538,80 @@
 </ol>
 <p>计算二重积分:</p>
 <ol>
-<li><p>将D用直线x=a与直线x=b包住，并计算对于确定的x，所对应的y坐标范围(一般用两个含x的函数表示)，先将函数对y积分，再对x积分(y型同理)。适用于:好算就行(),注意可交换积分次序，即通过已有积分次序画出图像，再重复上述过程。也可结合二元函数的轮换性质(即x、y等价)，如将一元函数转化成二元函数证明</p>
+<li>将D用直线x=a与直线x=b包住，并计算对于确定的x，所对应的y坐标范围(一般用两个含x的函数表示)，先将函数对y积分，再对x积分(y型同理)。适用于:好算就行(),注意可交换积分次序，即通过已有积分次序画出图像，再重复上述过程。也可结合二元函数的轮换性质(即x、y等价)，如将一元函数转化成二元函数证明</li>
+<li>转化成极坐标下的二重积分，即<script type="math/tex">x={\rho}*cos{\theta}</script>,<script type="math/tex">y={\rho}*sin{\theta}</script>,<script type="math/tex">\int_{x}\int_{y}f(x,y)=\int_{\theta}\int_{\rho}f({\rho}*cos{\theta},{\rho}*sin{\theta})*{\rho}</script>。同样分两种，<script type="math/tex">{\rho}</script>型用圆弧围住，<script type="math/tex">{\theta}</script>型用射线围住。注意，若原点在D的边界或D中，则用<script type="math/tex">{\theta}</script>型，其变化范围分别是两条切线间的角度与0到<script type="math/tex">2{\pi}</script>。适用于:f(x,y)或D含<script type="math/tex">x^{2}+y^{2}</script>，用x、y积分无法积出</li>
+<li>令<script type="math/tex">x=a*cos{\theta},y=b*sin{\theta}</script>,类似于2，如何转化参考4</li>
+<li>令<script type="math/tex">x=x(u,v),y=y(u,v)</script>,则<script type="math/tex">\iint_{D}f(x,y)=\iint_{D^{'} }f(x(u,v),y(u,v))*|\frac{\delta(x,y)}{\delta(u,v)}|*du*dv</script>(雅克比行列式)</li>
+</ol>
+<hr>
+<p>三重积分的概念</p>
+<p>三重积分的性质(类似二重积分):</p>
+<ol>
+<li>可叠加性</li>
+<li>积分中值定理,若f(x,y,z)在V上连续,存在一点<script type="math/tex">f(x_{0},y_{0},z_{0})</script>使得<script type="math/tex">\iiint_{V}f(x,y,z)=f(x_{0},y_{0},z_{0})*V</script></li>
+<li>改变有限个函数值不影响积分的值</li>
+</ol>
+<p>三重积分的计算：</p>
+<ol>
+<li><p>若积分边界都为常数，可按任意次序直接积分</p>
 </li>
-<li><p>转化成极坐标下的二重积分，即<script type="math/tex">x={\rho}*cos{\theta}</script>,<script type="math/tex">y={\rho}*sin{\theta}</script>,<script type="math/tex">\int_{x}\int_{y}f(x,y)=\int_{\theta}\int_{\rho}f({\rho}*cos{\theta},{\rho}*sin{\theta})*{\rho}</script>。同样分两种，<script type="math/tex">{\rho}</script>型用圆弧围住，<script type="math/tex">{\theta}</script>型用射线围住。注意，若原点在D的边界或D中，则用<script type="math/tex">{\theta}</script>型，其变化范围分别是两条切线间的角度与0到<script type="math/tex">2{\pi}</script>。适用于:f(x,y)或D含<script type="math/tex">x^{2}+y^{2}</script>，用x、y积分无法积出</p>
+<li><p>先一后二，即先将z按”线段长度”积分成含(x,y)的式子，再在V积分区域在xOy平面上的投影，对x、y进行二重积分</p>
+<p>适用于:容易算就行233</p>
 </li>
-<li><p>令<script type="math/tex">x=a*cos{\theta},y=b*sin{\theta}</script>,类似于2，如何转化参考4</p>
+<li><p>先二后一，先将积分区域截成一个个平行于xOy平面的截面，对每个截面进行二重积分后得出含z的式子，然后对z进行积分</p>
+<p>适用于:同上</p>
 </li>
-<li><p>令<script type="math/tex">x=x(u,v),y=y(u,v)</script>,则<script type="math/tex">\iint_{D}f(x,y)=\iint_{D^{'} }f(x(u,v),y(u,v))*|\frac{\delta(x,y)}{\delta(u,v)}|*du*dv</script>(雅克比行列式)</p>
+<li><p>柱面变化，即令<script type="math/tex">x={\rho}*cos{\theta}</script>,<script type="math/tex">y={\rho}*sin{\theta}</script>,<script type="math/tex">z=z</script>，对x、y积分时采用极坐标积分方法来化简计算(注意要<script type="math/tex">*{\rho}</script>)，其他同上述两种方法</p>
+<p>适用于:积分区域或积分方程含<script type="math/tex">x^{2}+y^{2}</script></p>
+</li>
+<li><p>球面变化，即令<script type="math/tex">x=r*cos{\theta}*sin{\psi}</script>,<script type="math/tex">y=r*sin{\theta}*sin{\psi}</script>,<script type="math/tex">z=r*cos{\psi}</script>，则<script type="math/tex">x^{2}+y^{2}+z^{2}=r^{2}</script>，其中，r为点到原点的距离，<script type="math/tex">{\theta}</script>为与xOy平面垂直的半平面的x轴正方向的夹角(<script type="math/tex">0<={\theta}<=2{\pi}</script>)(完全可以套用极坐标中的理解)，<script type="math/tex">{\psi}</script>即原点与点的连线，与z轴正方向的夹角(<script type="math/tex">0<={\psi}<={\pi}</script>)，注意转化后原式子需要<script type="math/tex">*r^{2}*sin{\psi}</script>(6中会解释)</p>
+<p>适用于:积分区域或积分方程中含球体方程</p>
+</li>
+<li><p>一般变化，<script type="math/tex">x=x(u,v,w)</script>,<script type="math/tex">y=y(u,v,w)</script>,<script type="math/tex">z=z(u,v,w)</script>,要求<script type="math/tex">\frac{\delta(x,y,z)}{\delta(u,v,w)}!=0</script>，则新的积分方程为<script type="math/tex">f(x(u,v,w),y(u,v,w),z(u,v,w))*|\frac{\delta(x,y,z)}{\delta(u,v,w)}|dudvdw</script>，注意雅可比行列式取绝对值</p>
+<p>适用于:平移球心至原点以化简计算</p>
+</li>
+<li><p>椭球变化，即令<script type="math/tex">x=a*r*cos{\theta}*sin{\psi}</script>,<script type="math/tex">y=b*r*sin{\theta}*sin{\psi}</script>,<script type="math/tex">z=c*r*cos{\psi}</script>，则<script type="math/tex">\frac{x^{2} }{a^{2} }+\frac{y^{2} }{b^{2} }+\frac{z^{2} }{c^{2} }=r^{2}</script>,原式子需<script type="math/tex">*abc*r^{2}*sin{\psi}</script></p>
+</li>
+</ol>
+<p>三重积分交换积分次序：</p>
+<ol>
+<li>将问题转化为交换相邻两个积分的积分次序</li>
+<li>套用二重积分交换积分次序</li>
+</ol>
+<p>一些化简计算的小tips:</p>
+<ol>
+<li>利用一般变化将球心、圆心移到原点，再依据函数的奇偶性与积分区域的对称性化简计算(平移后雅可比行列式为常数)</li>
+<li>利用积分区域的对称性和轮换性，将非对称积分式子转化为对称积分式子(如<script type="math/tex">1/4*x^{2}+1/9*y^{2}</script>变为<script type="math/tex">13/36*x^{2}</script>,再变为<script type="math/tex">13/72*(x^{2}+y^{2})</script>)</li>
+<li>将积分区域分割成几个对称的小部分，再利用函数奇偶性化简</li>
+<li>已知y=y(t),x=x(t),积分时先设y=y(x),最后统一用t代换</li>
+</ol>
+<hr>
+<p>重积分的应用</p>
+<p>计算曲面面积：</p>
+<ol>
+<li>曲面方程z=f(x,y)，(x,y)属于区域D，则<script type="math/tex">S=\iint_{D}\sqrt{1+f_{x}^{2}(x,y)+f_{y}^{2}(x,y)}dxdy</script>(同理，y=f(x)，a&lt;=x&lt;=b,弧长=<script type="math/tex">\int_{a}^{b}\sqrt{1+f^{2}(x)}</script>)</li>
+<li>曲面方程x=x(u,v),y=y(u,v),z=z(u,v),则<script type="math/tex">S=\iint_{D}\sqrt{ {(\frac{\delta(y,z)}{\delta(u,v)}) }^{2}+{(\frac{\delta(z,x)}{\delta(u,v)}) }^{2}+{(\frac{\delta(x,y)}{\delta(u,v)}) }^{2} }dudv</script>(同理,x=x(t),y=y(t),z=z(t),a&lt;=t&lt;=b,则弧长=<script type="math/tex">\int_{a}^{b}\sqrt{x^{'2}(t)+y^{'2}(t)+z^{'2}(t)}dt</script>)</li>
+</ol>
+<p>计算重心：</p>
+<ol>
+<li><p>若密度为<script type="math/tex">{\rho}(x,y,z)</script>，则<script type="math/tex">x_{0}=\frac{\iiint_{V} x*{\rho}(x,y,z)}{\iiint_{V}{\rho}(x,y,z)}</script>,<script type="math/tex">y_{0}=\frac{\iiint_{V} y*{\rho}(x,y,z)}{\iiint_{V}{\rho}(x,y,z)}</script>,</p>
+<script type="math/tex; mode=display">z_{0}=\frac{\iiint_{V} z*{\rho}(x,y,z)}{\iiint_{V}{\rho}(x,y,z)}</script></li>
+<li><p>密度为<script type="math/tex">{\rho}(x,y)</script>的薄片同理</p>
+</li>
+</ol>
+<p>计算转动惯量:</p>
+<ol>
+<li><p>对x轴的转动惯量：<script type="math/tex">\iiint_{V}(y^{2}+z^{2})*{\rho}(x,y,z)dV</script></p>
+<p>对y轴的转动惯量：<script type="math/tex">\iiint_{V}(x^{2}+z^{2})*{\rho}(x,y,z)dV</script></p>
+<p>对z轴的转动惯量：<script type="math/tex">\iiint_{V}(x^{2}+y^{2})*{\rho}(x,y,z)dV</script></p>
+</li>
+<li><p>对xOy平面的转动惯量：<script type="math/tex">\iiint_{V}(z^{2})*{\rho}(x,y,z)dV</script></p>
+<p>对xOz平面的转动惯量：<script type="math/tex">\iiint_{V}(y^{2})*{\rho}(x,y,z)dV</script></p>
+<p>对yOz平面的转动惯量：<script type="math/tex">\iiint_{V}(x^{2})*{\rho}(x,y,z)dV</script></p>
+</li>
+<li><p>密度为<script type="math/tex">{\rho}(x,y)</script>的薄片同理:</p>
+<p>对x轴的转动惯量：<script type="math/tex">\iiint_{D}(y^{2})*{\rho}(x,y)dD</script></p>
+<p>对y轴的转动惯量：<script type="math/tex">\iiint_{D}(x^{2})*{\rho}(x,y)dD</script></p>
 </li>
 </ol>
 
