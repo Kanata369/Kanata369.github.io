@@ -90,7 +90,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1913).png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/屏幕截图(1914).png">
 <meta property="article:published_time" content="2022-04-30T08:31:35.000Z">
-<meta property="article:modified_time" content="2022-05-19T10:24:43.852Z">
+<meta property="article:modified_time" content="2022-05-22T09:55:24.321Z">
 <meta property="article:author" content="Kanata">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1912).png">
@@ -614,6 +614,25 @@
 <p>对y轴的转动惯量：<script type="math/tex">\iiint_{D}(x^{2})*{\rho}(x,y)dD</script></p>
 </li>
 </ol>
+<hr>
+<p>第一型曲线积分</p>
+<script type="math/tex; mode=display">\int_{L}f(x,y)dS或\int_{L}f(x,y,z)dS</script><p>曲线积分的性质:</p>
+<ol>
+<li>可分割叠加(首尾相连)</li>
+<li>可计算重心、转动惯量，只是积分区间变为曲线</li>
+</ol>
+<p>曲线积分的计算:</p>
+<ol>
+<li>根据积分区域对称性、轮换对称性与积分方程奇偶性进行化简</li>
+<li>由于积分区域是个确定的方程，故积分方程可直接用积分区域方程代换化简，若积分方程代换成常数，则直接用常数*弧长</li>
+<li>利用参数方程转化成定积分计算：<ol>
+<li>积分区域方程为x=x(t),y=y(t),a&lt;=t&lt;=b,则<script type="math/tex">\int_{L}f(x,y)dS=\int_{a}^{b}f(x(t),y(t))\sqrt{x^{'2}(t)+y^{'2}(t)}dt</script>,若为x=x(t),y=y(t),z=z(t)，一样，根号下加个<script type="math/tex">z^{'2}(t)</script></li>
+<li>积分区域方程为y=y(x),a&lt;=x&lt;=b或x=x(y),a&lt;=y&lt;=b，同上。</li>
+<li>积分区域方程为<script type="math/tex">{\rho}={\rho}({\theta}),a<={\theta}<=b</script>,则<script type="math/tex">\int_{L}f(x,y)dS=\int_{a}^{b}f({\rho}*cos{\theta},{\rho}*sin{\theta})*\sqrt{ {\rho}^{2}(\theta)+{\rho}^{'2}(\theta)}d{\theta}</script></li>
+</ol>
+</li>
+</ol>
+<hr>
 
       
     </div>
@@ -727,7 +746,7 @@
               
                 <a href="/">
               
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
