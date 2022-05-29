@@ -90,7 +90,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1913).png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/屏幕截图(1914).png">
 <meta property="article:published_time" content="2022-04-30T08:31:35.000Z">
-<meta property="article:modified_time" content="2022-05-29T08:10:09.318Z">
+<meta property="article:modified_time" content="2022-05-29T08:19:35.998Z">
 <meta property="article:author" content="Kanata">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1912).png">
@@ -636,7 +636,34 @@
 <p>格林公式的应用</p>
 <p>单连通区域(单条闭合曲线)、复连通区域(多条闭合曲线)</p>
 <p>给定区域，规定曲线方向的正负—区域在左侧时方向为正，否则为负</p>
-<p>$$\iint_{D}(\frac</p>
+<script type="math/tex; mode=display">\iint_{D}(\frac{ {\delta}Q}{ {\delta}x}-\frac{ {\delta}P}{ {\delta}y})dxdy=\iint_{L}Pdx+Qdy</script><ol>
+<li>L为负向时，右边方程要加负号</li>
+<li>一般是将曲线积分变为二重积分(变成常数后，直接用常数*面积)，二重积分转化成曲线积分时方程不唯一</li>
+<li>条件:P、Q有一阶连续偏导数(不可包含奇点)</li>
+<li>常用：<script type="math/tex">\iint_{D}(1)dxdy=1/2*\iint_{L}xdy-ydx</script></li>
+</ol>
+<p>格林公式的应用:</p>
+<ol>
+<li>若<script type="math/tex">\frac{ {\delta}Q}{ {\delta}x}-\frac{ {\delta}P}{ {\delta}y}=0</script>，则区域D上积分为0(前题是区域D不包含奇点—一阶偏导数不连续的点)</li>
+<li>若D为单连通区域，则边界<strong>曲线积分值为0</strong>;若为复连通区域，则边界<strong>曲线积分值</strong>=内部曲线积分值的相反数(其和为0)</li>
+<li>求包含奇点的曲线积分值，可以将单连通区域变成复联通区域(内部曲线取好求的、包含奇点的曲线)，再通过2即可求出外部曲线积分值</li>
+<li>由3可知，若满足1，则包含奇点的任意曲线积分值都相同</li>
+</ol>
+<hr>
+<p>曲线积分与路径无关性</p>
+<p>若D为单连通区域，且区域内P、Q的一阶连续偏导数存在，则以下定义等价:</p>
+<ol>
+<li>沿D内任一光滑闭合曲线L积分值为0</li>
+<li>曲线积分L(不一定闭合)的值只与起点、终点有关，与积分路径无关</li>
+<li>Pdx+Qdy为某函数u(x,y)的全微分，即du=Pdx+Qdy</li>
+<li>在D内处处成立:<script type="math/tex">\frac{ {\delta}Q}{ {\delta}x}-\frac{ {\delta}P}{ {\delta}y}=0</script>(常用)</li>
+</ol>
+<p>应用:</p>
+<ol>
+<li>求某一条非闭合曲线的积分(起点、终点不一样)，证得其与路径无关后，用更简易的路径方程积分(注意两条曲线之间不能包含奇点)</li>
+<li>求原方程u(x,y)(针对定义3)，定下起点<script type="math/tex">(x_{0},y_{0})</script>，终点<script type="math/tex">(x,y)</script>后将积分路径分解成两条平行于坐标轴的直线，然后按定义积分即可(记得加常数C)，也可以直接按偏导数的知识求原方程</li>
+</ol>
+<hr>
 
       
     </div>
