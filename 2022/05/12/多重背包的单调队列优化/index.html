@@ -87,7 +87,7 @@
 <meta property="og:description" content="前置知识:背包dp+单调队列">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-12T05:42:01.000Z">
-<meta property="article:modified_time" content="2022-05-12T11:13:40.116Z">
+<meta property="article:modified_time" content="2022-05-30T07:24:05.923Z">
 <meta property="article:author" content="Kanata">
 <meta property="article:tag" content="dp">
 <meta name="twitter:card" content="summary">
@@ -358,7 +358,7 @@
 <p>将物品拆分成logs[i]种物品，即可保证物品被选择的个数都被考虑到，又可减少上述重复情况，时间复杂度为O(n*m*logl)</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> tot=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">logdp</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> log=<span class="number">1</span>;</span><br><span class="line">        cin&gt;&gt;cost&gt;&gt;wealth&gt;&gt;num;</span><br><span class="line">        <span class="keyword">while</span>(num-log&gt;<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            c[tot]=cost*log;</span><br><span class="line">            w[tot]=wealth*log;</span><br><span class="line">            tot++;</span><br><span class="line">            num-=log;</span><br><span class="line">            log*=<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(num&gt;<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            c[tot]=cost*num;</span><br><span class="line">            c[tot]=wealth*num;</span><br><span class="line">            tot++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>继续观察，f[i][j]可从f[i-1][j-k*c]中转移过来，可视作:</p>
-<p>f[i][j]=max(f[i-1][j-k*c]+k<em>w),同理f[i][j+c]=max(f[i-1][j+c-k\</em>c]+k*w)</p>
+<p>f[i][j]=max(f[i-1][j-k*c]+k<em>w),同理f[i][j+c]=max(f[i-1][j+c-k</em>c]+k*w)</p>
 <p>两者的状态转移方程中存在重叠部分，重叠部分的值只相差一个w，而重叠部分的大小关系不会改变</p>
 <p>故我们可以将j从0~m，根据对c的余数分割成c个部分：</p>
 <p>0、c、2c、3c:%c=0</p>
