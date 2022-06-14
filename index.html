@@ -348,7 +348,7 @@
 <ol>
 <li>一个合数N，一定存在一个质数&lt;=<script type="math/tex">\sqrt{N}</script>并整除N(用于大范围判断质数—求出<script type="math/tex">\sqrt{N}</script>的质数表)</li>
 <li>一个合数N(<1e9)最多含有10种不同的质数因子(最小的10种质数相乘已超过1e9)，每种质数因子的指数不超过30(2^31>1e9)</li>
-<li>求N!阶乘的质数分解形式，则统计1~N中各个质数的指数和，即<script type="math/tex">/frac{N}{p}+/frac{N}{p^2}+/frac{N}{p^3}+...</script>(为何不是<script type="math/tex">2*/frac{N}{p^2}</script>—其中一个已统计过)</li>
+<li>求N!阶乘的质数分解形式，则统计1~N中各个质数的指数和，即<script type="math/tex">\frac{N}{p}+\frac{N}{p^2}+\frac{N}{p^3}+...</script>(为何不是<script type="math/tex">2*\frac{N}{p^2}</script>—其中一个已统计过)</li>
 <li>gcd(n,x)=gcd(n,n-x)，所以与n不互质的数成对出现—与n互质的数也成对出现(平均值为n/2)，故与n互质的数的和=<script type="math/tex">n/2*{\phi}{n}</script></li>
 <li>若<script type="math/tex">a^{x}=1(mod n)</script>,若a、n互质,则最小的正整数x为<script type="math/tex">{\phi}(n)</script>的约数(反证法—若不为约数,则<script type="math/tex">x=k*{\phi}(n)+r</script>,则r更小且满足条件)</li>
 <li>求a%mod的值，而mod为非质数(如999911658)，可将mod分解成质数积，如999911658=2*3*4679*35617,分别计算a%2,a%3,a%4679,a%35617,这几个数互质,可得出一个线性同余方程组,运用CRT求解得到a%mod的值</li>
