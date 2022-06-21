@@ -90,7 +90,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1913).png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/屏幕截图(1914).png">
 <meta property="article:published_time" content="2022-04-30T08:31:35.000Z">
-<meta property="article:modified_time" content="2022-05-29T08:19:35.998Z">
+<meta property="article:modified_time" content="2022-06-20T16:37:05.772Z">
 <meta property="article:author" content="Kanata">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1912).png">
@@ -664,6 +664,28 @@
 <li>求原方程u(x,y)(针对定义3)，定下起点<script type="math/tex">(x_{0},y_{0})</script>，终点<script type="math/tex">(x,y)</script>后将积分路径分解成两条平行于坐标轴的直线，然后按定义积分即可(记得加常数C)，也可以直接按偏导数的知识求原方程</li>
 </ol>
 <hr>
+<p>第一型曲面积分</p>
+<p>将曲面积分投影到一个平面内，转化成二重积分<script type="math/tex">\iint{f(x,y,z)dS}=\iint_{D_{xy}}f(x,y,z(x,y))*\sqrt{1+z_{x}^{2}+z_{y}^{2} }</script>(投影到yz、xz平面同理)</p>
+<p>注意投影时不能选择投影不为面的平面</p>
+<p>可运用对称性、轮换对称性进行化简</p>
+<hr>
+<p>第二型曲面积分</p>
+<p>与第二型曲线积分:<script type="math/tex">\iint_{L}Pdx+Qdy</script>类似:<script type="math/tex">\iint_{S}P(x,y,z)dydz+Q(x,y,z)dzdx+R(x,y,z)dxdy</script></p>
+<p>引入曲面的正侧和反侧:</p>
+<p>给定z=z(x,y),规定法向量与z轴夹角为锐角一侧的法向量为正侧，另一侧为负侧(适用于双侧曲面，即莫比乌斯环等单侧曲面不适用)</p>
+<p>两类积分的转化:<script type="math/tex">\iint_{S}P(x,y,z)dydz+Q(x,y,z)dzdx+R(x,y,z)dxdy</script>=<script type="math/tex">\iint_{S}P*cos+Q*cos+R*cosdS</script>(cos为点(x,y,z)处单位法向量)，当二型的一个投影难以确定或不好计算时，可转化成一型计算(一般适用于法向量方向一定—即平面、球面—此处结合求曲面的法向量)</p>
+<p>如何计算:</p>
+<ol>
+<li>转化为3个投影区域上的二重积分之和(即Pdxdy、Qdydz、Rdzdx直接分开算)(注意需要通过法向量方向判断是减还是加)</li>
+<li>利用对称性化简(注意考虑法向量方向的正负—P为偶函数积分为0，P为奇函数积分*2)</li>
+<li>补成闭合曲面后(注意正负侧要对应)，单独计算补面的积分(一般容易计算)，再将闭合曲面转化成三重积分计算</li>
+<li>三重积分为0且包含奇点时，同理，选取一个容易计算的、包含奇点的新闭合曲面进行计算</li>
+</ol>
+<hr>
+<p>高斯公式—-将曲面积分转化为三重积分</p>
+<script type="math/tex; mode=display">\iint(\frac{ {\delta}P}{ {\delta}x}+\frac{ {\delta}Q}{ {\delta}y}+\frac{ {\delta}R}{ {\delta}z})dxdydz=\iint_{S}P(x,y,z)dydz+Q(x,y,z)dzdx+R(x,y,z)dxdy</script><hr>
+<p>斯托克斯公式—-将二型空间曲线积分转化成二型曲面积分(方向符合右手定则)</p>
+<script type="math/tex; mode=display">\iint_{S}((\frac{ {\delta}R}{ {\delta}y}-\frac{ {\delta}Q}{ {\delta}z})dydz+(\frac{ {\delta}P}{ {\delta}z}-\frac{ {\delta}R}{ {\delta}x})dydz)dzdx+(\frac{ {\delta}Q}{ {\delta}x}-\frac{ {\delta}P}{ {\delta}y})dxdy=\iint_{L}P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz</script><hr>
 
       
     </div>
