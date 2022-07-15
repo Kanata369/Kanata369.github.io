@@ -87,7 +87,7 @@
 <meta property="og:description" content="树的遍历:  中序、先序、后序 bfs序   树的重心:  给定无根树，设以节点u为root时，其最大子树大小最小，则称u为该树的重心 若u为重心，则u的最大子树大小一定不超过n&#x2F;2(n为总节点数)，同时，若u的最大子树大小不超过n&#x2F;2，则u为该树的重心(易直观想到) 同一颗树最多存在两个重心(一颗子树为n&#x2F;2,一颗子树为n&#x2F;2-1，可知n一定为偶数，且两个重心一定相邻)（若节点数为偶数，总能找">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-04-24T16:28:37.000Z">
-<meta property="article:modified_time" content="2022-04-28T17:19:31.492Z">
+<meta property="article:modified_time" content="2022-07-13T10:28:20.213Z">
 <meta property="article:author" content="Kanata">
 <meta property="article:tag" content="图论">
 <meta name="twitter:card" content="summary">
@@ -358,7 +358,7 @@
 <ol>
 <li>给定无根树，设以节点u为root时，其最大子树大小最小，则称u为该树的重心</li>
 <li>若u为重心，则u的最大子树大小一定不超过n/2(n为总节点数)，同时，若u的最大子树大小不超过n/2，则u为该树的重心(易直观想到)</li>
-<li>同一颗树最多存在两个重心(一颗子树为n/2,一颗子树为n/2-1，可知n一定为偶数，且两个重心一定相邻)（若节点数为偶数，总能找到种划分方法找到两个重心?)</li>
+<li>同一颗树最多存在两个重心(一颗子树为n/2,一颗子树为n/2-1，可知n一定为偶数，且两个重心一定相邻)（若节点数为偶数，总能找到种划分方法找到两个重心?—不一定)</li>
 <li>向树中添加节点时，若节点数为偶数，则原本的两个重心有一个不为重心，若节点数为奇数，则可能出现新的重心，原本的重心仍为重心</li>
 <li>两树通过一条边连接时，取较大的树的连接节点，则新的重心一定在该连接节点到该树的原本重心的路径上(若两树大小相同，则两个连接节点即为新重心)</li>
 <li>树的重心到各个节点的距离之和最小</li>
@@ -512,7 +512,7 @@
               
                 <a href="/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
