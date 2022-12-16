@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/k(180x180).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/k(32x32).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/k(16x16).png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logok.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="摸了.jpg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高数下笔记">
+<meta property="og:url" content="https://kanata369.github.io/2022/04/30/%E9%AB%98%E6%95%B0%E4%B8%8B%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Kanata&#39;s blog">
+<meta property="og:description" content="摸了.jpg">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1912).png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1913).png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/屏幕截图(1914).png">
+<meta property="article:published_time" content="2022-04-30T08:31:35.000Z">
+<meta property="article:modified_time" content="2022-06-20T16:37:05.772Z">
+<meta property="article:author" content="Kanata">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1912).png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://Kanata369.github.io/2022/04/30/高数下笔记/"/>
+
+
+
+
+
+  <title>高数下笔记 | Kanata's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kanata's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Kanata369.github.io/2022/04/30/%E9%AB%98%E6%95%B0%E4%B8%8B%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kanata's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">高数下笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-04-30T16:31:35+08:00">
+                2022-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">大学学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>摸了.jpg</p>
+<span id="more"></span>
+<h1 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h1><p>级数的概念</p>
+<p>级数条件收敛、绝对收敛的区别</p>
+<p>级数收敛的充分必要条件：<script type="math/tex">S_{n}</script>收敛于常数a</p>
+<p>级数收敛的必要条件：<script type="math/tex">u_{n}</script>极限为0、子序列都收敛于同一常数a、对级数任意添加括号后其收敛性不变</p>
+<p>收敛级数的性质：线性运算(收敛级数+发散级数=发散级数)</p>
+<p>正项/负项级数判断收敛方法：</p>
+<ol>
+<li>比较法(极限形式)，寻找已知收敛性的正项级数(<script type="math/tex">n^{p}与x^{n}</script>),与极限中的泰勒展开等知识联系，也可用基本不等式转化形式，结合收敛级数性质证明，如<script type="math/tex">\frac{\sqrt{u_{n} } } {n}-->\frac{1}{n^{2}+u_{n} }</script>(PS:<script type="math/tex">\frac{(lnn)^{k} } {n^{p}}</script>敛散性同<script type="math/tex">\frac{1}{n^{p} }</script>)</li>
+<li>比值判别法(极限形式)、根值判别法(极限形式)，一般根值比比值更加通用</li>
+<li>积分判别法,仅当<script type="math/tex">u_{n}=f(n)</script>为非负单减函数，<script type="math/tex">u_{n}</script>与f(n)趋向于正无穷的积分同敛散，放缩证明(通过积分，我们可以证明<script type="math/tex">\frac{1}{n^{p}*{(lnn)^{k}}}</script>的敛散性如下：当p&gt;1,收敛,当p<1,发散,当p=1,若k>1收敛,若k&lt;=1,则发散)</li>
+<li>拉贝判别法,当<script type="math/tex">u_{n}</script>为正项级数，设<script type="math/tex">r=\lim_{n\to\infty}n*(1-\frac{u_{n+1}}{u_{n}})</script>,则r&gt;1时,收敛;r=1时,需进一步判断;r&lt;1时,发散,可以理解为比值判别法在等于1的情况下进一步收紧</li>
+</ol>
+<p>一般级数的判断收敛方法：</p>
+<ol>
+<li>先用绝对值+正项级数的判断方法，若收敛，则绝对收敛(注意,若用绝对值的比值、根值判别法判断出发散,则直接知道该级数发散)</li>
+<li>若绝对值不收敛，且该级数为交错级数，若其绝对值(极限形式)递减且极限为0，则该交错级数收敛</li>
+</ol>
+<p>一般级数收敛的性质:</p>
+<ol>
+<li>若绝对收敛,则级数中的正项部分、负项部分都分别收敛，若条件收敛，则级数中的正项部分、负项部分则分别发散(交错级数下,正负项级数的下标确定,可运用该性质)</li>
+<li>绝对收敛的级数，其项任意重排后仍绝对收敛，其和不变，条件收敛重排后可能发散或改变其和</li>
+</ol>
+<hr>
+<p>函数项级数、幂级数的概念、收敛点、发散点、收敛域</p>
+<p>和函数的概念、泰勒级数、麦克劳林级数</p>
+<p>如何求收敛域：</p>
+<ol>
+<li>定义求，即取<script type="math/tex">u_{n+1}/u_{n}</script>，当n趋于无穷时，使使该值小于1的值，而等于1的值需要进行特判(适用于指数为3*n-1等不规则情况)</li>
+<li>结论求，<script type="math/tex">R=\lim_{n\to\infty}{|\frac{a_{n}}{a_{n+1}}|}</script>,若R==0,则收敛域为<script type="math/tex">x_{0}</script>,若<script type="math/tex">R=\infty</script>,则收敛域为实数集，其他情况需对端点进行特判(绝对or条件收敛or发散)(为定义求的导出公式)</li>
+</ol>
+<p>幂级数性质：</p>
+<ol>
+<li>两个幂级数相加相乘，收敛域一般取交集</li>
+<li>可进行求导、积分等操作</li>
+</ol>
+<p>如何将函数展开成幂级数：</p>
+<ol>
+<li>参考泰勒公式，用裂项等方式转化成初等函数样式，收敛域同样得出，无需验证</li>
+<li>对原函数进行求导、微分等操作转化成初等函数样式，同上</li>
+<li>取<script type="math/tex">a_{n}</script>为原函数的n阶导函数在<script type="math/tex">x_{0}</script>处的值除以n的阶乘，并求出收敛区间R，验证<script type="math/tex">R_{n}(x)</script>(误差函数，参考拉格朗日余项)在n趋向于无穷时是否为0</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1912).png"  /></p>
+<p>如何求和函数:</p>
+<ol>
+<li>求导、积分、提取因式成等比数列形式，用等比数列求得和函数后再变形，注意积分时要加<script type="math/tex">S(0)</script></li>
+<li>转化成初等函数的幂函数展开形式，再进行逆运算(适用于含阶乘的式子)(2n!!可转化成<script type="math/tex">2^{n}*n!</script>)(可能涉及<script type="math/tex">e^{x}、sinx、cosx</script>展开式的互消)</li>
+<li>变量替换成简单的形式再进行求和</li>
+</ol>
+<p>如何求级数的和：</p>
+<ol>
+<li>将级数中的常数替换成x，使其变成函数项级数，求得和函数后代入，需要注意收敛域得包含该常数</li>
+</ol>
+<hr>
+<p>傅里叶级数</p>
+<p>原函数要求—周期函数、有限个第一类间断点、极值点(比展开成幂函数的条件低得多)</p>
+<p>傅里叶级数的性质：</p>
+<ol>
+<li><p>傅里叶级数在<script type="math/tex">x_{0}</script>处的值为原函数在<script type="math/tex">x_{0}</script>左右极限值的平均值(故不一定与原函数相等)</p>
+</li>
+<li><p>傅里叶级数在实数集内收敛</p>
+</li>
+<li><p>若函数以2<em>p为周期，则</em></p>
+<script type="math/tex; mode=display">a_{0}=\frac{1} {p}*\int^{p}_{-p}f(x)dx</script><script type="math/tex; mode=display">a_{n}=\frac{1}{p}*\int^{p}_{-p}f(x)*cos\frac{n{\pi}x} {p}dx</script><script type="math/tex; mode=display">b_{n}=\frac{1}{p}*\int^{p}_{-p}f(x)*sin\frac{n{\pi}x} {p}dx</script><p>(常给出傅里叶级数来推周期)</p>
+</li>
+</ol>
+<p>正弦级数的性质:</p>
+<ol>
+<li><script type="math/tex">a_{n}</script>均为0，为奇函数</li>
+</ol>
+<p>余弦函数的性质:</p>
+<ol>
+<li><script type="math/tex">b_{n}</script>均为0,为偶函数</li>
+</ol>
+<p>题目只给出(0,T/2)的函数，要求展开成正弦、余弦函数，依据要求补全函数</p>
+<hr>
+<h1 id="解析几何"><a href="#解析几何" class="headerlink" title="解析几何"></a>解析几何</h1><p>如何判断直线异面、相交、平行</p>
+<ol>
+<li>若向量平行，则平行</li>
+<li>若向量相交，在两个直线上各取一点，取这两点的向量，若三个向量异面，则两直线异面，否则两直线相交</li>
+</ol>
+<p>如何求两异面直线之间的距离</p>
+<ol>
+<li>各取直线上任意一点，取其连线向量</li>
+<li>假设将一条直线移至另一条直线所在平面，取该平面法向量(由两条直线向量得到)</li>
+<li>同求面外一点到平面的距离</li>
+</ol>
+<p>如何求直线的切线、法平面(即切向量)</p>
+<ol>
+<li>给定以t为自变量的参数式，x、y、z分别对t求导后，取<script type="math/tex">( x'(t_{0}),y'(t_{0}),z'(t_{0}) )</script>即为切向量</li>
+<li>若给定y=y(x)、z(x)，则y、z分别对x求导同上，取<script type="math/tex">( 1,y'(x_{0}),z'(t_{0}) )</script>即为切向量(给的是隐函数也可，如<script type="math/tex">x^{2}+y^{2}=R^{2}</script>)</li>
+<li>若给定一般式，即F(x,y,z)=0,G(x,y,z)=0,则切向量为<script type="math/tex">(\frac{ {\partial}(F,G)}{ {\partial}(y,z)},\frac{ {\partial}(F,G)}{ {\partial}(z,x)},\frac{ {\partial}(F,G)}{ {\partial}(x,y)})</script>在<script type="math/tex">(x_{0},y_{0},z_{0})</script>(雅克比行列式)</li>
+</ol>
+<p>如何求曲面的切平面、法线(即法向量)</p>
+<ol>
+<li>曲面方程为F(x,y,z)，则法向量为<script type="math/tex">(F_{x}(p_{0}),F_{y}(p_{0}),F_{z}(p_{0}))</script>(设曲面上过<script type="math/tex">p_{0}</script>的任意一条曲线可推)</li>
+<li>z=f(x,y),则F(x,y,z)=f(x,y)-z=0，同上</li>
+<li>若为参数式，即x=x(u,v),y=y(u,v),z=z(u,v),则法向量为<script type="math/tex">(\frac{ {\partial}(y,z)}{ {\partial}(u,v)},\frac{ {\partial}(z,x)}{ {\partial}(u,v)},\frac{ {\partial}(x,y)}{ {\partial}(u,v)})</script>(雅克比行列式)</li>
+</ol>
+<p>如何求曲线的弧长:</p>
+<ol>
+<li>给定参数式，则<script type="math/tex">S=\int_{a}^{b}\sqrt{x^{2}(t)+y^{2}(t)+z^{2}(t)}dt</script>(二维、高维都可类推)</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(1913).png"  /></p>
+<hr>
+<h1 id="多元函数"><a href="#多元函数" class="headerlink" title="多元函数"></a>多元函数</h1><p>多元函数极限的性质:</p>
+<ol>
+<li>若两种累次极限(即先趋近于<script type="math/tex">x_{0}</script>再趋近于<script type="math/tex">y_{0}</script>或相反)和二重极限(同时趋近)都存在，则三者相等</li>
+<li>若两种累次极限都存在且不相等，则二重极限不存在</li>
+</ol>
+<hr>
+<p>多元函数连续的概念</p>
+<p>如何判断多元函数连续:</p>
+<ol>
+<li>若为<script type="math/tex">\frac{x^{a} *y^{b} }{\sqrt[k]{x^{2}+y^{2}} }</script>,则将x、y都放成<script type="math/tex">\sqrt{x^{2}+y^{2} }</script>的形式，若极限为0，则连续，若不为0，则不连续</li>
+<li>将y替换成<script type="math/tex">y=y_{0},k*x,k*x^{2}</script>的形式，或者其他可以消元的形式(注意需要x趋近于<script type="math/tex">x_{0}</script>时，y也要趋近于<script type="math/tex">y_{0}</script>)，多代几种形式，若极限不存在或不统一，则不连续</li>
+<li>求累次极限，若都存在且不相等，则该多元函数在此点极限不存在</li>
+</ol>
+<hr>
+<p>偏导数的概念</p>
+<p>如何求偏导数:</p>
+<ol>
+<li>定义求，一坐标取极限，其他坐标固定一般用于分段函数</li>
+<li>将除所求偏导以外的自变量视为常数，正常求导</li>
+<li>若给定隐函数,一是转化成方程形式,G(x,y,z)=0(注意需要<script type="math/tex">\frac{ {\partial}G}{ {\partial}z}!=0</script>),则<script type="math/tex">\frac{ {\partial}z}{ {\partial}x}=-\frac{G_{1} }{G_{3} }</script>;二是根据定义求,一样转化成方程形式后,根据链式法则与偏导数等于0推出,和公式差不多;三是将方程用全微分展开,得到dz=…dx+…dy的形式</li>
+<li>若给定方程组,则自由变量数=总变量数-方程数,一可使用雅可比式;二可将方程组对自由变量求偏导(此时因变量用自由变量表示),能得出以因变量对自由变量偏导为未知数的方程组，解该方程组即可;三是求全微分，消去依然是化成dv=…dx+…dy和du=…dx+…dy的形式(所有变量统一做自变量处理)</li>
+</ol>
+<p>偏导数的性质:</p>
+<ol>
+<li>若两种二阶偏导数(xy与yx)都在<script type="math/tex">(x_{0},y_{0})</script>处连续，则两者在该点处值相等</li>
+</ol>
+<hr>
+<p>全增量的概念、全微分的概念</p>
+<p>如何判断全微分存在：</p>
+<ol>
+<li><script type="math/tex; mode=display">\frac{dz-f_{x}*dx-f_{y}*dy}{\alpha*dx+\beta*dy}</script><p>or</p>
+<script type="math/tex; mode=display">\frac{dz-f_{x}*dx-f_{y}*dy}{\sqrt{dx^{2}+dy^{2}}}</script><p>极限若为0，则全微分存在，极限不为0，则全微分不存在</p>
+</li>
+<li><p>若偏导数在<script type="math/tex">(x_{0},y_{0})</script>处均连续，则在该点可微</p>
+</li>
+</ol>
+<hr>
+<p>方向导数的概念，存在方向导数!=可微or连续or偏导数存在</p>
+<p>如何求方向导数u(x,y,z):</p>
+<ol>
+<li><p>先求梯度,</p>
+<p>(<script type="math/tex">\frac{ {\partial} u} { {\partial}x},\frac{ {\partial}u} { {\partial}y},\frac{ {\partial}u} { {\partial}z}</script>),梯度为矢量，用方向导数所对应的方向矢量与其点乘(当函数在该点可微时)(此时方向导数反映曲面与某个切面的交线的斜率)</p>
+</li>
+<li><p>若函数不可微:定义求—<script type="math/tex">\lim_{p{\to}p_{0} }\frac{ {\delta}u} {p}</script>(p为以<script type="math/tex">p_{0}</script>为起点的射线长度)</p>
+</li>
+</ol>
+<p>梯度的应用:</p>
+<ol>
+<li>给定二元函数z=f(x,y),则在<script type="math/tex">p_{0}</script>处的梯度为其等值线f(x,y)-f(<script type="math/tex">x_{0},y_{0}</script>)=0的一个法向量</li>
+<li>同理，u=f(x,y,z)，则梯度为等值面的一个法向量</li>
+</ol>
+<hr>
+<p>多元函数极值的概念</p>
+<ol>
+<li>极值点一定为内点</li>
+<li>存在极值点不代表该点函数可偏导or连续</li>
+</ol>
+<p>如何求多元函数的极值:</p>
+<ol>
+<li>多元函数的极值一定存在于驻点或偏导数不存在的点(驻点可通过求偏导数均为0的点得出)</li>
+<li>对于驻点，我们设<script type="math/tex">A=f_{xx}(x_{0},y_{0})</script>,<script type="math/tex">B=f_{xy}(x_{0},y_{0})</script>,<script type="math/tex">C=f_{yy}(x_{0},y_{0})</script>,若<script type="math/tex">B^{2}-A*C<0</script>,则该点为极值点，若A或C&gt;0时，该点为极小值，若A或C<0，则该点为极大值;若$$B^{2}-A*C>0<script type="math/tex">，则一定不为极值点;若</script>B^{2}-A*C=0$$,则不一定,进一步讨论(与判断多元函数极限是否存在类似，取几个特殊情况方程来消元、判断)</li>
+<li>偏导数不存在的点只能根据定义来求(同上，取特殊情况方程讨论)</li>
+</ol>
+<p>如何求带有限制下的极值(拉格朗日乘数法)</p>
+<ol>
+<li>u=u(x,y,z),限制为t(x,y,z)=0,则设F(x,y,z,a)=u(x,y,z)+a*t(x,y,z),再根据偏导数都为0，得出方程组，解为<script type="math/tex">x_{0},y_{0},z_{0},a_{0}</script>(<script type="math/tex">a_{0}</script>不是一定要求),则该点即为限制情况下的可能极值点</li>
+</ol>
+<p>如何求多元函数在闭区域上的最大、最小值—先求边界内部的极值点，边界上的点运用拉格朗日乘数法得出</p>
+<p>应用：求给定曲面到某个平面的最短距离等等</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/屏幕截图(1914).png"  /></p>
+<hr>
+<p>二重积分的性质:</p>
+<ol>
+<li>线性运算</li>
+<li>积分区域可叠加</li>
+<li>若f(x,y)&lt;=g(x,y)，则在D上f(x,y)的积分&lt;=g(x,y)的积分</li>
+<li>f(x,y)在D上最大值为M，最小值为m，则<script type="math/tex">S_{D}*m<=\iint_{D}f(x,y)<=S_{D}*M</script></li>
+<li>若f(x,y)在D上连续，则存在一点<script type="math/tex">p_{0}</script>，使得<script type="math/tex">S_{D}*f(x_{0},y_{0})==\iint_{D}f(x,y)</script></li>
+<li>计算二重积分时可根据f(x,y)关于x、y的奇偶性对D进行化简</li>
+</ol>
+<p>计算二重积分:</p>
+<ol>
+<li>将D用直线x=a与直线x=b包住，并计算对于确定的x，所对应的y坐标范围(一般用两个含x的函数表示)，先将函数对y积分，再对x积分(y型同理)。适用于:好算就行(),注意可交换积分次序，即通过已有积分次序画出图像，再重复上述过程。也可结合二元函数的轮换性质(即x、y等价)，如将一元函数转化成二元函数证明</li>
+<li>转化成极坐标下的二重积分，即<script type="math/tex">x={\rho}*cos{\theta}</script>,<script type="math/tex">y={\rho}*sin{\theta}</script>,<script type="math/tex">\int_{x}\int_{y}f(x,y)=\int_{\theta}\int_{\rho}f({\rho}*cos{\theta},{\rho}*sin{\theta})*{\rho}</script>。同样分两种，<script type="math/tex">{\rho}</script>型用圆弧围住，<script type="math/tex">{\theta}</script>型用射线围住。注意，若原点在D的边界或D中，则用<script type="math/tex">{\theta}</script>型，其变化范围分别是两条切线间的角度与0到<script type="math/tex">2{\pi}</script>。适用于:f(x,y)或D含<script type="math/tex">x^{2}+y^{2}</script>，用x、y积分无法积出</li>
+<li>令<script type="math/tex">x=a*cos{\theta},y=b*sin{\theta}</script>,类似于2，如何转化参考4</li>
+<li>令<script type="math/tex">x=x(u,v),y=y(u,v)</script>,则<script type="math/tex">\iint_{D}f(x,y)=\iint_{D^{'} }f(x(u,v),y(u,v))*|\frac{\delta(x,y)}{\delta(u,v)}|*du*dv</script>(雅克比行列式)</li>
+</ol>
+<hr>
+<p>三重积分的概念</p>
+<p>三重积分的性质(类似二重积分):</p>
+<ol>
+<li>可叠加性</li>
+<li>积分中值定理,若f(x,y,z)在V上连续,存在一点<script type="math/tex">f(x_{0},y_{0},z_{0})</script>使得<script type="math/tex">\iiint_{V}f(x,y,z)=f(x_{0},y_{0},z_{0})*V</script></li>
+<li>改变有限个函数值不影响积分的值</li>
+</ol>
+<p>三重积分的计算：</p>
+<ol>
+<li><p>若积分边界都为常数，可按任意次序直接积分</p>
+</li>
+<li><p>先一后二，即先将z按”线段长度”积分成含(x,y)的式子，再在V积分区域在xOy平面上的投影，对x、y进行二重积分</p>
+<p>适用于:容易算就行233</p>
+</li>
+<li><p>先二后一，先将积分区域截成一个个平行于xOy平面的截面，对每个截面进行二重积分后得出含z的式子，然后对z进行积分</p>
+<p>适用于:同上</p>
+</li>
+<li><p>柱面变化，即令<script type="math/tex">x={\rho}*cos{\theta}</script>,<script type="math/tex">y={\rho}*sin{\theta}</script>,<script type="math/tex">z=z</script>，对x、y积分时采用极坐标积分方法来化简计算(注意要<script type="math/tex">*{\rho}</script>)，其他同上述两种方法</p>
+<p>适用于:积分区域或积分方程含<script type="math/tex">x^{2}+y^{2}</script></p>
+</li>
+<li><p>球面变化，即令<script type="math/tex">x=r*cos{\theta}*sin{\psi}</script>,<script type="math/tex">y=r*sin{\theta}*sin{\psi}</script>,<script type="math/tex">z=r*cos{\psi}</script>，则<script type="math/tex">x^{2}+y^{2}+z^{2}=r^{2}</script>，其中，r为点到原点的距离，<script type="math/tex">{\theta}</script>为与xOy平面垂直的半平面的x轴正方向的夹角(<script type="math/tex">0<={\theta}<=2{\pi}</script>)(完全可以套用极坐标中的理解)，<script type="math/tex">{\psi}</script>即原点与点的连线，与z轴正方向的夹角(<script type="math/tex">0<={\psi}<={\pi}</script>)，注意转化后原式子需要<script type="math/tex">*r^{2}*sin{\psi}</script>(6中会解释)</p>
+<p>适用于:积分区域或积分方程中含球体方程</p>
+</li>
+<li><p>一般变化，<script type="math/tex">x=x(u,v,w)</script>,<script type="math/tex">y=y(u,v,w)</script>,<script type="math/tex">z=z(u,v,w)</script>,要求<script type="math/tex">\frac{\delta(x,y,z)}{\delta(u,v,w)}!=0</script>，则新的积分方程为<script type="math/tex">f(x(u,v,w),y(u,v,w),z(u,v,w))*|\frac{\delta(x,y,z)}{\delta(u,v,w)}|dudvdw</script>，注意雅可比行列式取绝对值</p>
+<p>适用于:平移球心至原点以化简计算</p>
+</li>
+<li><p>椭球变化，即令<script type="math/tex">x=a*r*cos{\theta}*sin{\psi}</script>,<script type="math/tex">y=b*r*sin{\theta}*sin{\psi}</script>,<script type="math/tex">z=c*r*cos{\psi}</script>，则<script type="math/tex">\frac{x^{2} }{a^{2} }+\frac{y^{2} }{b^{2} }+\frac{z^{2} }{c^{2} }=r^{2}</script>,原式子需<script type="math/tex">*abc*r^{2}*sin{\psi}</script></p>
+</li>
+</ol>
+<p>三重积分交换积分次序：</p>
+<ol>
+<li>将问题转化为交换相邻两个积分的积分次序</li>
+<li>套用二重积分交换积分次序</li>
+</ol>
+<p>一些化简计算的小tips:</p>
+<ol>
+<li>利用一般变化将球心、圆心移到原点，再依据函数的奇偶性与积分区域的对称性化简计算(平移后雅可比行列式为常数)</li>
+<li>利用积分区域的对称性和轮换性，将非对称积分式子转化为对称积分式子(如<script type="math/tex">1/4*x^{2}+1/9*y^{2}</script>变为<script type="math/tex">13/36*x^{2}</script>,再变为<script type="math/tex">13/72*(x^{2}+y^{2})</script>)</li>
+<li>将积分区域分割成几个对称的小部分，再利用函数奇偶性化简</li>
+<li>已知y=y(t),x=x(t),积分时先设y=y(x),最后统一用t代换</li>
+</ol>
+<hr>
+<p>重积分的应用</p>
+<p>计算曲面面积：</p>
+<ol>
+<li>曲面方程z=f(x,y)，(x,y)属于区域D，则<script type="math/tex">S=\iint_{D}\sqrt{1+f_{x}^{2}(x,y)+f_{y}^{2}(x,y)}dxdy</script>(同理，y=f(x)，a&lt;=x&lt;=b,弧长=<script type="math/tex">\int_{a}^{b}\sqrt{1+f^{2}(x)}</script>)</li>
+<li>曲面方程x=x(u,v),y=y(u,v),z=z(u,v),则<script type="math/tex">S=\iint_{D}\sqrt{ {(\frac{\delta(y,z)}{\delta(u,v)}) }^{2}+{(\frac{\delta(z,x)}{\delta(u,v)}) }^{2}+{(\frac{\delta(x,y)}{\delta(u,v)}) }^{2} }dudv</script>(同理,x=x(t),y=y(t),z=z(t),a&lt;=t&lt;=b,则弧长=<script type="math/tex">\int_{a}^{b}\sqrt{x^{'2}(t)+y^{'2}(t)+z^{'2}(t)}dt</script>)</li>
+</ol>
+<p>计算重心：</p>
+<ol>
+<li><p>若密度为<script type="math/tex">{\rho}(x,y,z)</script>，则<script type="math/tex">x_{0}=\frac{\iiint_{V} x*{\rho}(x,y,z)}{\iiint_{V}{\rho}(x,y,z)}</script>,<script type="math/tex">y_{0}=\frac{\iiint_{V} y*{\rho}(x,y,z)}{\iiint_{V}{\rho}(x,y,z)}</script>,</p>
+<script type="math/tex; mode=display">z_{0}=\frac{\iiint_{V} z*{\rho}(x,y,z)}{\iiint_{V}{\rho}(x,y,z)}</script></li>
+<li><p>密度为<script type="math/tex">{\rho}(x,y)</script>的薄片同理</p>
+</li>
+</ol>
+<p>计算转动惯量:</p>
+<ol>
+<li><p>对x轴的转动惯量：<script type="math/tex">\iiint_{V}(y^{2}+z^{2})*{\rho}(x,y,z)dV</script></p>
+<p>对y轴的转动惯量：<script type="math/tex">\iiint_{V}(x^{2}+z^{2})*{\rho}(x,y,z)dV</script></p>
+<p>对z轴的转动惯量：<script type="math/tex">\iiint_{V}(x^{2}+y^{2})*{\rho}(x,y,z)dV</script></p>
+</li>
+<li><p>对xOy平面的转动惯量：<script type="math/tex">\iiint_{V}(z^{2})*{\rho}(x,y,z)dV</script></p>
+<p>对xOz平面的转动惯量：<script type="math/tex">\iiint_{V}(y^{2})*{\rho}(x,y,z)dV</script></p>
+<p>对yOz平面的转动惯量：<script type="math/tex">\iiint_{V}(x^{2})*{\rho}(x,y,z)dV</script></p>
+</li>
+<li><p>密度为<script type="math/tex">{\rho}(x,y)</script>的薄片同理:</p>
+<p>对x轴的转动惯量：<script type="math/tex">\iiint_{D}(y^{2})*{\rho}(x,y)dD</script></p>
+<p>对y轴的转动惯量：<script type="math/tex">\iiint_{D}(x^{2})*{\rho}(x,y)dD</script></p>
+</li>
+</ol>
+<hr>
+<p>第一型曲线积分</p>
+<script type="math/tex; mode=display">\int_{L}f(x,y)dS或\int_{L}f(x,y,z)dS</script><p>曲线积分的性质:</p>
+<ol>
+<li>可分割叠加(首尾相连)</li>
+<li>可计算重心、转动惯量，只是积分区间变为曲线</li>
+</ol>
+<p>曲线积分的计算:</p>
+<ol>
+<li>根据积分区域对称性、轮换对称性与积分方程奇偶性进行化简</li>
+<li>由于积分区域是个确定的方程，故积分方程可直接用积分区域方程代换化简，若积分方程代换成常数，则直接用常数*弧长</li>
+<li>利用参数方程转化成定积分计算：<ol>
+<li>积分区域方程为x=x(t),y=y(t),a&lt;=t&lt;=b,则<script type="math/tex">\int_{L}f(x,y)dS=\int_{a}^{b}f(x(t),y(t))\sqrt{x^{'2}(t)+y^{'2}(t)}dt</script>,若为x=x(t),y=y(t),z=z(t)，一样，根号下加个<script type="math/tex">z^{'2}(t)</script></li>
+<li>积分区域方程为y=y(x),a&lt;=x&lt;=b或x=x(y),a&lt;=y&lt;=b，同上。</li>
+<li>积分区域方程为<script type="math/tex">{\rho}={\rho}({\theta}),a<={\theta}<=b</script>,则<script type="math/tex">\int_{L}f(x,y)dS=\int_{a}^{b}f({\rho}*cos{\theta},{\rho}*sin{\theta})*\sqrt{ {\rho}^{2}(\theta)+{\rho}^{'2}(\theta)}d{\theta}</script></li>
+</ol>
+</li>
+</ol>
+<hr>
+<p>格林公式的应用</p>
+<p>单连通区域(单条闭合曲线)、复连通区域(多条闭合曲线)</p>
+<p>给定区域，规定曲线方向的正负—区域在左侧时方向为正，否则为负</p>
+<script type="math/tex; mode=display">\iint_{D}(\frac{ {\delta}Q}{ {\delta}x}-\frac{ {\delta}P}{ {\delta}y})dxdy=\iint_{L}Pdx+Qdy</script><ol>
+<li>L为负向时，右边方程要加负号</li>
+<li>一般是将曲线积分变为二重积分(变成常数后，直接用常数*面积)，二重积分转化成曲线积分时方程不唯一</li>
+<li>条件:P、Q有一阶连续偏导数(不可包含奇点)</li>
+<li>常用：<script type="math/tex">\iint_{D}(1)dxdy=1/2*\iint_{L}xdy-ydx</script></li>
+</ol>
+<p>格林公式的应用:</p>
+<ol>
+<li>若<script type="math/tex">\frac{ {\delta}Q}{ {\delta}x}-\frac{ {\delta}P}{ {\delta}y}=0</script>，则区域D上积分为0(前题是区域D不包含奇点—一阶偏导数不连续的点)</li>
+<li>若D为单连通区域，则边界<strong>曲线积分值为0</strong>;若为复连通区域，则边界<strong>曲线积分值</strong>=内部曲线积分值的相反数(其和为0)</li>
+<li>求包含奇点的曲线积分值，可以将单连通区域变成复联通区域(内部曲线取好求的、包含奇点的曲线)，再通过2即可求出外部曲线积分值</li>
+<li>由3可知，若满足1，则包含奇点的任意曲线积分值都相同</li>
+</ol>
+<hr>
+<p>曲线积分与路径无关性</p>
+<p>若D为单连通区域，且区域内P、Q的一阶连续偏导数存在，则以下定义等价:</p>
+<ol>
+<li>沿D内任一光滑闭合曲线L积分值为0</li>
+<li>曲线积分L(不一定闭合)的值只与起点、终点有关，与积分路径无关</li>
+<li>Pdx+Qdy为某函数u(x,y)的全微分，即du=Pdx+Qdy</li>
+<li>在D内处处成立:<script type="math/tex">\frac{ {\delta}Q}{ {\delta}x}-\frac{ {\delta}P}{ {\delta}y}=0</script>(常用)</li>
+</ol>
+<p>应用:</p>
+<ol>
+<li>求某一条非闭合曲线的积分(起点、终点不一样)，证得其与路径无关后，用更简易的路径方程积分(注意两条曲线之间不能包含奇点)</li>
+<li>求原方程u(x,y)(针对定义3)，定下起点<script type="math/tex">(x_{0},y_{0})</script>，终点<script type="math/tex">(x,y)</script>后将积分路径分解成两条平行于坐标轴的直线，然后按定义积分即可(记得加常数C)，也可以直接按偏导数的知识求原方程</li>
+</ol>
+<hr>
+<p>第一型曲面积分</p>
+<p>将曲面积分投影到一个平面内，转化成二重积分<script type="math/tex">\iint{f(x,y,z)dS}=\iint_{D_{xy}}f(x,y,z(x,y))*\sqrt{1+z_{x}^{2}+z_{y}^{2} }</script>(投影到yz、xz平面同理)</p>
+<p>注意投影时不能选择投影不为面的平面</p>
+<p>可运用对称性、轮换对称性进行化简</p>
+<hr>
+<p>第二型曲面积分</p>
+<p>与第二型曲线积分:<script type="math/tex">\iint_{L}Pdx+Qdy</script>类似:<script type="math/tex">\iint_{S}P(x,y,z)dydz+Q(x,y,z)dzdx+R(x,y,z)dxdy</script></p>
+<p>引入曲面的正侧和反侧:</p>
+<p>给定z=z(x,y),规定法向量与z轴夹角为锐角一侧的法向量为正侧，另一侧为负侧(适用于双侧曲面，即莫比乌斯环等单侧曲面不适用)</p>
+<p>两类积分的转化:<script type="math/tex">\iint_{S}P(x,y,z)dydz+Q(x,y,z)dzdx+R(x,y,z)dxdy</script>=<script type="math/tex">\iint_{S}P*cos+Q*cos+R*cosdS</script>(cos为点(x,y,z)处单位法向量)，当二型的一个投影难以确定或不好计算时，可转化成一型计算(一般适用于法向量方向一定—即平面、球面—此处结合求曲面的法向量)</p>
+<p>如何计算:</p>
+<ol>
+<li>转化为3个投影区域上的二重积分之和(即Pdxdy、Qdydz、Rdzdx直接分开算)(注意需要通过法向量方向判断是减还是加)</li>
+<li>利用对称性化简(注意考虑法向量方向的正负—P为偶函数积分为0，P为奇函数积分*2)</li>
+<li>补成闭合曲面后(注意正负侧要对应)，单独计算补面的积分(一般容易计算)，再将闭合曲面转化成三重积分计算</li>
+<li>三重积分为0且包含奇点时，同理，选取一个容易计算的、包含奇点的新闭合曲面进行计算</li>
+</ol>
+<hr>
+<p>高斯公式—-将曲面积分转化为三重积分</p>
+<script type="math/tex; mode=display">\iint(\frac{ {\delta}P}{ {\delta}x}+\frac{ {\delta}Q}{ {\delta}y}+\frac{ {\delta}R}{ {\delta}z})dxdydz=\iint_{S}P(x,y,z)dydz+Q(x,y,z)dzdx+R(x,y,z)dxdy</script><hr>
+<p>斯托克斯公式—-将二型空间曲线积分转化成二型曲面积分(方向符合右手定则)</p>
+<script type="math/tex; mode=display">\iint_{S}((\frac{ {\delta}R}{ {\delta}y}-\frac{ {\delta}Q}{ {\delta}z})dydz+(\frac{ {\delta}P}{ {\delta}z}-\frac{ {\delta}R}{ {\delta}x})dydz)dzdx+(\frac{ {\delta}Q}{ {\delta}x}-\frac{ {\delta}P}{ {\delta}y})dxdy=\iint_{L}P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz</script><hr>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/04/29/%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/" rel="next" title="笛卡尔树">
+                <i class="fa fa-chevron-left"></i> 笛卡尔树
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/05/01/%E6%A0%91%E4%B8%8A%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6-DSU-on-tree/" rel="prev" title="树上启发式合并/DSU on tree">
+                树上启发式合并/DSU on tree <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1496089152&auto=0&height=66"></iframe>
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/">
+              
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/dyg-55" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Zhihu</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://tangdouer.cn" title="糖豆儿" target="_blank">糖豆儿</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">级数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95"><span class="nav-number">2.</span> <span class="nav-text">解析几何</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">多元函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kanata</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	//下面的HTML-CSS和SVG用于在小屏幕上，数学公式可以自动换行，我测试过后发现无效，但是貌似有人可以。
+	"HTML-CSS": { 
+		linebreaks: { 
+			automatic: true 
+		} 
+	},SVG: {
+		linebreaks: { 
+			automatic: true 
+		}
+	},menuSettings: {
+		zoom: "None"
+	},
+	showMathMenu: false,
+	jax: ["input/TeX","output/CommonHTML"],
+	extensions: ["tex2jax.js"],
+	TeX: {
+		extensions: ["AMSmath.js","AMSsymbols.js"],
+		equationNumbers: {
+			autoNumber: "AMS"
+		}
+	},tex2jax: {
+		inlineMath: [["\\(", "\\)"]],
+		displayMath: [["\\[", "\\]"]]
+	}
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"scale":1.5,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>
