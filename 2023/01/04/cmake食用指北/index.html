@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/k(180x180).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/k(32x32).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/k(16x16).png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logok.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="C++," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="关于cmake的入门常识,不深究原理,能用就行.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cmake食用指北">
+<meta property="og:url" content="https://kanata369.github.io/2023/01/04/cmake%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97/index.html">
+<meta property="og:site_name" content="Kanata&#39;s blog">
+<meta property="og:description" content="关于cmake的入门常识,不深究原理,能用就行.">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-01-03T17:10:18.000Z">
+<meta property="article:modified_time" content="2023-01-05T20:26:38.252Z">
+<meta property="article:author" content="Kanata">
+<meta property="article:tag" content="C++">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://Kanata369.github.io/2023/01/04/cmake食用指北/"/>
+
+
+
+
+
+  <title>cmake食用指北 | Kanata's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kanata's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Kanata369.github.io/2023/01/04/cmake%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kanata's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">cmake食用指北</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-01-04T01:10:18+08:00">
+                2023-01-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>关于cmake的入门常识,不深究原理,能用就行.</p>
+<span id="more"></span>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/github_18974657/category_11182071.html">https://blog.csdn.net/github_18974657/category_11182071.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://cmake.org/cmake/help/latest/guide/tutorial/index.html">https://cmake.org/cmake/help/latest/guide/tutorial/index.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38410730/article/details/102477162">https://blog.csdn.net/qq_38410730/article/details/102477162</a></p>
+<h1 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h1><p>由于C++项目中依赖关系众多(详见csapp链接一章),我们不可能每次都输入那么一大串编译命令来编译程序,而一般的脚本也无法很好地处理复杂的依赖关系,故使用makefile来代替脚本,而cmake便是生成makefile文件的工具. cmake则通过Cmakelist.txt文件来生成makefile文件.</p>
+<p>而我们通常将cmake生成makefile文件或对应工程文件的这个过程,称为程序的构建. cmake的两大功能,就是程序的构建和管理. 其实程序管理就是如何通过Cmakelist.txt这个文件来控制程序构建的过程.</p>
+<p>关于makefile的介绍:<a target="_blank" rel="noopener" href="https://seisman.github.io/how-to-write-makefile/introduction.html">https://seisman.github.io/how-to-write-makefile/introduction.html</a></p>
+<hr>
+<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Cmakelist.txt文件中的几个概念:</p>
+<ol>
+<li>command:即命令,如set(),add_executable()等</li>
+<li>variable:即变量,有内部变量即Cmake自身定义的变量,如PROJECT_SOURCE_DIR(Cmakelist.txt所在文件夹路径),PROJECT_NAME(Cmakelist.txt管理的项目名称),也有用户自定义的变量(可通过set命令定义)</li>
+<li>package:即包,第三方库提供,可帮助用户快速指定依赖库</li>
+</ol>
+<hr>
+<h1 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h1><p>1.cmake_minimum_required(VERSION [x.xx]):设置cmake的最小版本号,可以避免cmake版本不兼容等问题</p>
+<p>2.project([project_name]  [VERSION x.xx] [LANGUAGES CXX]):设置项目名称,项目版本号,以及该项目所用语言,<strong>CXX表示C++</strong></p>
+<p>3.find_package([package_name] COMPONENTS [component1_name] [component2_name]…[REQUIRED]):寻找第三方库提供的组件,并将<strong>查找结果存储</strong>在[package_name]变量中(注意,包确定唯一的package_name,不可更改,即你只能用Qt5这个变量来存储Qt5提供的Widgets组件).可以一次寻找多个组件,用<strong>空格</strong>或<strong>换行</strong>分割.最后的REQUIRED可加可不加,添加表示若找不到该库则<strong>编译失败</strong>.</p>
+<p>4.set([variable<em>name] [variable_value]):将变量值赋给变量,其中变量可以是自己设的变量,也可以是系统自带的变量(一般有**CMAKE</em>**前缀,如CMAKE_CXX_STANDARD表示设定的C++标准,CMAKE_CXX_STANDARD_REQUIRED表示是否强制要求C++标准),系统自带变量值为ON时表示开启</p>
+<p>5.add_executable([output_name] [file1] [file2]…):添加一个名称为[output_name]的可执行文件,该可执行文件的源码由[file1],[file2]…提供</p>
+<p>6.target_link_libraries([output_name] [component]):说明该可执行文件需要的第三方库模块</p>
+<p>example:</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD <span class="number">11</span>)</span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD_REQUIRED <span class="keyword">ON</span>)</span><br><span class="line"><span class="keyword">find_package</span>(Qt5 COMPONENTS Widgets REQUIRED)</span><br><span class="line"><span class="keyword">set</span>(SOURCE_FILES</span><br><span class="line">main.cpp</span><br><span class="line"><span class="keyword">test</span>.cpp</span><br><span class="line">myhead.h</span><br><span class="line">)</span><br><span class="line"><span class="comment">#可以用set将变量设置为多个文件</span></span><br><span class="line"><span class="keyword">add_executable</span>(<span class="keyword">test</span> <span class="variable">$&#123;SOURCE_FILES&#125;</span>)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="keyword">test</span> Qt5::Widgets)</span><br></pre></td></tr></table></figure>
+<p>7.add_library([lib_name] [SHARED/STATIC] [file1] [file2]):添加一个名称为[lib_name]的库文件,添加SHARED参数表示该库是个动态库,STATIC表示该库是个静态库,其他与add_executable类似</p>
+<p>8.target_compile_definitions([target] [define]):在编译[target]的时候,添加一个名叫[define]的宏定义.</p>
+<p>example: QT在生成库工程时,会额外生成一个头文件,该头文件控制:若当前工程定义了ADD_LIBRARY,则头文件会通过宏定义告诉编译器需要导出的类和函数,否则头文件会告诉编译器需要导入的类和函数(仅适用于windows平台).我们为了工程能在Windows平台正常编译,可以通过该命令添加ADD_LIBRARY宏定义.</p>
+<p>9.include_directories([path_name]),link_directories([path_name]):在使用第三方库时,我们可以通过find_package定位我们需要的模块.但如果我们想使用自己的库,就需要使用这两个命令.其中,include_directories表示<strong>库的头文件</strong>路径,link_directories表示<strong>库文件</strong>路径,之后就可以正常链接</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span>(SOURCE_FILES</span><br><span class="line">main.cpp</span><br><span class="line">myhead.h)</span><br><span class="line"><span class="keyword">add_executable</span>(<span class="keyword">test</span> <span class="variable">$&#123;SOURCE_FILES&#125;</span>)</span><br><span class="line"><span class="keyword">include_directories</span>(<span class="variable">$&#123;CMAKE_CURRENT_SOURCE_DIR&#125;</span>)</span><br><span class="line"><span class="keyword">link_directories</span>(<span class="variable">$&#123;CMAKE_CURRENT_SOURCE_DIR&#125;</span>)</span><br><span class="line"><span class="comment">#CMAKE_CURRENT_SOURCE_DIR为Cmakelist.txt所在路径</span></span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="keyword">test</span> libadd.so)</span><br></pre></td></tr></table></figure>
+<p>10.add_compile_options([options]):很显然,就是在编译时,添加-O2,-Wall等参数</p>
+<p>example:写code时若需要输出中文,仅仅是指明<strong>输出</strong>utf-8编码可能还不够,如果使用gcc编译,gcc默认情况下无法处理GBK编码下的中文,故需要添加参数<strong>-finput-charset=GBK</strong>表示源码为GBK编码</p>
+<hr>
+<h1 id="树型结构"><a href="#树型结构" class="headerlink" title="树型结构"></a>树型结构</h1><p>项目文件一般是呈树形结构,如(库文件,源文件等等),我们可以对其各个模块分别使用Cmakelist管理,但模块之间实际上是被分割成了不同的项目,模块之间的依赖关系不被保留(如源文件依赖库文件,所以库文件应该先被编译)</p>
+<p>故我们使用add_subdirectory命令.在保留每个模块Cmakelist.txt的基础上,我们在其父目录再新建一个Cmakelist.txt,使用<strong>add_subdirectory</strong>([subdirectory_name]).add_subdirectory会执行子目录中Cmakelist的指定操作,先添加库文件对应子目录,再添加源文件对应子目录即可.</p>
+<p>tips:</p>
+<p>1.采用该种方法,target_link_libraries([output_name] [lib_name])中lib_name不用写libxxx.so,直接用add_library中指定的output_name即可</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">add_library</span>(mylib SHARED libtest.cpp)</span><br><span class="line"><span class="comment">#会生成libmylib.so库文件</span></span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="keyword">test</span> mylib)</span><br><span class="line"><span class="comment">#同时也不需要include_directories和link_directories</span></span><br></pre></td></tr></table></figure>
+<p>2.添加子目录时,变量之间是彼此共享的,多个子目录都使用的相同变量,只用在父目录的list中定义一次.在子目录中再次定义该变量,原变量会被覆盖(需要注意的是target开头的命令只针对当前模块,不对其他模块起效,如前文中在编译时添加宏定义的target_compile_definitions)</p>
+<hr>
+<p>在管理项目时,我们往往希望源文件都统一放在某个目录下,库文件,可执行文件都放在某个目录下,故我们使用install命令来指定文件的路径</p>
+<p><strong>install</strong>(FILES/TARGETS [name1] [name2] … DESTINATION [path_name]):如果参数选择FILES,则将对应名字的文件存放于path_name所指定路径中,如果参数选择TARGETS,则将output_name所对应的executable或library生成在指定的目录中,若缺省DESTINATION和path_name,则会生成在CMAKE_INSTALL_PREFIX的bin/lib…目录中</p>
+<p>tips:</p>
+<p>1.还可以根据文件的不同类型,来指定其生成路径,文件大致有三种类型:(1)RUNTIME:可执行文件和dll文件(windows环境下)(默认放在bin目录),即运行时需要的文件</p>
+<p>(2)LIBRARY:动态库文件(linux的.so)和动态库导入文件(windows下dll对应的lib文件)</p>
+<p>(3)ARCHIVE:静态库文件,即lib文件(LIBRARY和ARCHIVE默认放在lib目录,都是链接时需要的库文件)</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">install</span>(TARGETS <span class="keyword">test</span></span><br><span class="line">RUNTIME DESTINATION bin</span><br><span class="line">LIBRARY DESTINATION lib</span><br><span class="line">ARCHIVE DESTINATION lib)</span><br></pre></td></tr></table></figure>
+<p>2.当我们将动态库库文件和可执行文件放在不同目录时需注意,程序可能无法正常运行,因为可执行程序无法找到动态库,我们在add_executable命令之前使用set命令设置CMAKE_INSTALL_RPATH为库文件对应目录,以供程序额外搜索</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span>(CMAKE_INSTALL_RPTAH <span class="string">&quot;../lib&quot;</span>)</span><br><span class="line"><span class="comment">#指定其到运行时目录的父目录下的lib目录中寻找</span></span><br><span class="line"><span class="keyword">set</span>(CMAKE_INSTALL_RPATH <span class="string">&quot;$ORIGIN/../lib&quot;</span>)</span><br><span class="line"><span class="comment">#注意两种写法差别</span></span><br></pre></td></tr></table></figure>
+<p>当我们使用相对路径(即第一种写法)时,是以运行时路径为基准,不一定是可执行程序所在目录,而第二种写法是以可执行程序所在目录作为基准,一般采用第二种</p>
+<p>该方案<strong>不适用于Windows</strong>系统,在Windows系统下可以将动态库文件和可执行程序放在同一目录下</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"># C++</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/11/18/CF104021D/" rel="next" title="CF104021D">
+                <i class="fa fa-chevron-left"></i> CF104021D
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1496089152&auto=0&height=66"></iframe>
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/">
+              
+                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/dyg-55" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Zhihu</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://tangdouer.cn" title="糖豆儿" target="_blank">糖豆儿</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">1.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">常识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">3.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">基本命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%91%E5%9E%8B%E7%BB%93%E6%9E%84"><span class="nav-number">5.</span> <span class="nav-text">树型结构</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kanata</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	//下面的HTML-CSS和SVG用于在小屏幕上，数学公式可以自动换行，我测试过后发现无效，但是貌似有人可以。
+	"HTML-CSS": { 
+		linebreaks: { 
+			automatic: true 
+		} 
+	},SVG: {
+		linebreaks: { 
+			automatic: true 
+		}
+	},menuSettings: {
+		zoom: "None"
+	},
+	showMathMenu: false,
+	jax: ["input/TeX","output/CommonHTML"],
+	extensions: ["tex2jax.js"],
+	TeX: {
+		extensions: ["AMSmath.js","AMSsymbols.js"],
+		equationNumbers: {
+			autoNumber: "AMS"
+		}
+	},tex2jax: {
+		inlineMath: [["\\(", "\\)"]],
+		displayMath: [["\\[", "\\]"]]
+	}
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"scale":1.5,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>
