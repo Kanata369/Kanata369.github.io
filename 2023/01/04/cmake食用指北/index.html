@@ -87,7 +87,7 @@
 <meta property="og:description" content="关于cmake的入门常识,不深究原理,能用就行.">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-01-03T17:10:18.000Z">
-<meta property="article:modified_time" content="2023-01-05T20:26:38.252Z">
+<meta property="article:modified_time" content="2023-01-05T20:33:09.704Z">
 <meta property="article:author" content="Kanata">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -366,7 +366,7 @@
 <h1 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h1><p>1.cmake_minimum_required(VERSION [x.xx]):设置cmake的最小版本号,可以避免cmake版本不兼容等问题</p>
 <p>2.project([project_name]  [VERSION x.xx] [LANGUAGES CXX]):设置项目名称,项目版本号,以及该项目所用语言,<strong>CXX表示C++</strong></p>
 <p>3.find_package([package_name] COMPONENTS [component1_name] [component2_name]…[REQUIRED]):寻找第三方库提供的组件,并将<strong>查找结果存储</strong>在[package_name]变量中(注意,包确定唯一的package_name,不可更改,即你只能用Qt5这个变量来存储Qt5提供的Widgets组件).可以一次寻找多个组件,用<strong>空格</strong>或<strong>换行</strong>分割.最后的REQUIRED可加可不加,添加表示若找不到该库则<strong>编译失败</strong>.</p>
-<p>4.set([variable<em>name] [variable_value]):将变量值赋给变量,其中变量可以是自己设的变量,也可以是系统自带的变量(一般有**CMAKE</em>**前缀,如CMAKE_CXX_STANDARD表示设定的C++标准,CMAKE_CXX_STANDARD_REQUIRED表示是否强制要求C++标准),系统自带变量值为ON时表示开启</p>
+<p>4.set([variable-name] [variable-value]):将变量值赋给变量,其中变量可以是自己设的变量,也可以是系统自带的变量(一般有CMAKE_前缀,如CMAKE_CXX_STANDARD表示设定的C++标准,CMAKE_CXX_STANDARD_REQUIRED表示是否强制要求C++标准),系统自带变量值为ON时表示开启</p>
 <p>5.add_executable([output_name] [file1] [file2]…):添加一个名称为[output_name]的可执行文件,该可执行文件的源码由[file1],[file2]…提供</p>
 <p>6.target_link_libraries([output_name] [component]):说明该可执行文件需要的第三方库模块</p>
 <p>example:</p>
