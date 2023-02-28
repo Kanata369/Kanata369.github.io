@@ -87,7 +87,7 @@
 <meta property="og:description" content="质数相关:  一个合数N，一定存在一个质数&lt;&#x3D;\sqrt{N}并整除N(用于大范围判断质数—求出\sqrt{N}的质数表) 一个合数N(1e9) 求N!阶乘的质数分解形式，则统计1~N中各个质数的指数和，即\frac{N}{p}+\frac{N}{p^2}+\frac{N}{p^3}+...(为何不是2*\frac{N}{p^2}—其中一个已统计过) gcd(n,x)&#x3D;gcd(n,n-x)，">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-06-03T06:27:43.000Z">
-<meta property="article:modified_time" content="2022-10-24T16:21:13.755Z">
+<meta property="article:modified_time" content="2023-02-24T09:39:29.929Z">
 <meta property="article:author" content="Kanata">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
@@ -359,6 +359,7 @@
 <li>原根、离散对数:给定质数p，若有一个数r满足gcd(r,p)=1,且<script type="math/tex">r^{1}~r^{p-1}</script>次方刚好遍历了<script type="math/tex">Z_{p}</script>(即小于p且与p互质的所有数)，则称r是p的原根(dft/idft中，998244353的对应原根是3，其他模数的原根:<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45697774/article/details/115732914)，而$$r^{e}=a(mod">https://blog.csdn.net/weixin_45697774/article/details/115732914)，而$$r^{e}=a(mod</a> p)$$，则称e是以p为模，以r为底时，a所对应的离散对数。原根具有循环性，被应用于模意义下的fft。</li>
 <li>伪素数:若<script type="math/tex">a^{n-1}==1(mod n)</script>，且n是合数，则称n是以a为底的伪素数，实践中可通过取多个底来判断n是否是素数(注意，存在合数，满足其是任意底的伪素数，故没法百分百确定)</li>
 <li>若a+b=c,则a与b互质的充要条件是a和c也互质(故a+b=c且a与b互质的对数为phi[c])</li>
+<li>计算阶乘相关时,可能出现分子,分母阶乘mod后均为0,实际结果不为0的情况(因为可能其因数相消将mod数p消去),此时要求出各个阶乘提取p后的结果—根据威尔逊定理((p-1)!==-1 mod p)</li>
 </ol>
 <p>约数相关:</p>
 <ol>
@@ -489,7 +490,7 @@
               
                 <a href="/">
               
-                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-count">59</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
