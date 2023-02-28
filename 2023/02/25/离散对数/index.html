@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230228110630900.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230228111046849.png">
 <meta property="article:published_time" content="2023-02-25T10:39:49.000Z">
-<meta property="article:modified_time" content="2023-02-28T03:13:18.374Z">
+<meta property="article:modified_time" content="2023-02-28T03:25:02.645Z">
 <meta property="article:author" content="Kanata">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
@@ -368,13 +368,13 @@
 <span id="more"></span>
 <p>首先,让我们复习一下群论知识.</p>
 <p>群G的阶就是其元素的个数,记作ord(G)或|G|,群内元素a的阶是使得$a^m=e$成立的最小正整数m,记作ord(a)或|a|</p>
-<p>循环群:记为$G_{n}$,群G中任意一个元素$a=g^{k}$,其中k为整数,g为群G的生成元,而生成元的阶就是群G的阶.显然单位元$e=g^{0}$.设$g^x=e$,由于任意一个元素都可由g生成,所以x&gt;=n(若x<n,则会出现一个长度小于n的循环节.和任意元素都可由g生成相悖).若x>n,则1~n之间一定存在两个数i,j,满足$g^i=g^j$,所以$g^(j-i)=e$,则与x&gt;n相悖.</p>
-<p>综上,生成元的阶即为群的阶,$g^n=g^0=e$.而阶为n的有限循环群同构于模n剩余类对于加法构的群$Z_{n}$.</p>
-<p>循环群中,设a的阶最大为p,则p是其他所有元素的阶的倍数(证明:假设存在元素b,其阶r小于p,且r不是p的因数,设$r=q^{k<em>{r} }*j$,$p=q^{k</em>{p} }*i$,则$a^{q^{k<em>{p} } }$的阶数为i,$b^{j}$的阶数为$q^{k</em>{r} }$,二者相乘,能造出一个阶数更大的数,与前提相悖)</p>
+<p>循环群:记为<script type="math/tex">G_{n}</script>,群G中任意一个元素<script type="math/tex">a=g^{k}</script>,其中k为整数,g为群G的生成元,而生成元的阶就是群G的阶.显然单位元<script type="math/tex">e=g^{0}</script>.设<script type="math/tex">g^x=e</script>,由于任意一个元素都可由g生成,所以x&gt;=n(若x<n,则会出现一个长度小于n的循环节.和任意元素都可由g生成相悖).若x>n,则1~n之间一定存在两个数i,j,满足<script type="math/tex">g^i=g^j</script>,所以<script type="math/tex">g^(j-i)=e</script>,则与x&gt;n相悖.</p>
+<p>综上,生成元的阶即为群的阶,<script type="math/tex">g^n=g^0=e</script>.而阶为n的有限循环群同构于模n剩余类对于加法构的群<script type="math/tex">Z_{n}</script>.</p>
+<p>循环群中,设a的阶最大为p,则p是其他所有元素的阶的倍数(证明:假设存在元素b,其阶r小于p,且r不是p的因数,设<script type="math/tex">r=q^{k_{r} }*j</script>,<script type="math/tex">p=q^{k_{p} }*i</script>,则<script type="math/tex">a^{q^{k_{p} } }</script>的阶数为i,<script type="math/tex">b^{j}</script>的阶数为<script type="math/tex">q^{k_{r} }</script>,二者相乘,能造出一个阶数更大的数,与前提相悖)</p>
 <p>再来复习一下同余方程.</p>
 <p>对于任意的a,至多有n个不同的x&lt;m满足nx=a mod m</p>
-<p>假设,存在n+1个不同的x满足nx=a mod m,那么对于方程$nx-n*{x_{n+1} }=0 mod m$也存在n+1个不同的解(二者等效)</p>
-<p>设gcd(m,n)=d,m=kd,n=jd那么上述第二个方程可化为,$j(x-{x<em>{n+1} })=0 mod k$,其中j,k互质,所以存在逆元,故所有的x在mod k意义下和$x</em>{n+1}$相等,即$x=x_{n+1}+p*k$,又由于x 在mod m下不同,则最多有d-1个不同的p,所以解的个数小于d-1,即小于n.</p>
+<p>假设,存在n+1个不同的x满足nx=a mod m,那么对于方程<script type="math/tex">nx-n*{x_{n+1} }=0 mod m</script>也存在n+1个不同的解(二者等效)</p>
+<p>设gcd(m,n)=d,m=kd,n=jd那么上述第二个方程可化为,<script type="math/tex">j(x-{x_{n+1} })=0 mod k</script>,其中j,k互质,所以存在逆元,故所有的x在mod k意义下和<script type="math/tex">x_{n+1}</script>相等,即<script type="math/tex">x=x_{n+1}+p*k</script>,又由于x 在mod m下不同,则最多有d-1个不同的p,所以解的个数小于d-1,即小于n.</p>
 <p>综上,最多有n个不同的x&lt;m满足nx=a mod m</p>
 <p>上述问题还有一个朴素的证法:nx= a mod m,假设存在n+1个解,易知将解重新排序后,设解之间的差为dif,则dif*n=lcm(n,m),即nx增加了lcm(n,m),则最后一个解-第一个解=dif*n,则x实际上增加了lcm(n,m),所以第一个解和最后一个解 mod m意义上相同,故不存在超过n个解</p>
 <p>事实上,会了这个证明可以看看<a target="_blank" rel="noopener" href="https://codeforces.com/gym/104090/problem/A">https://codeforces.com/gym/104090/problem/A</a></p>
