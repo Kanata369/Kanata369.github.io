@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/k(180x180).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/k(32x32).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/k(16x16).png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logok.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="第三章">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络笔记-3">
+<meta property="og:url" content="https://kanata369.github.io/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-3/index.html">
+<meta property="og:site_name" content="Kanata&#39;s blog">
+<meta property="og:description" content="第三章">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223100113960.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223101759285.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223101911827.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223102027656.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223102507925.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223104543262.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223105930147.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223110335755.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223110955563.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223111442837.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223111956528.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223112449483.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223112511642.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223113014951.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223113508171.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223113650653.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223114456837.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223114851441.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223141345669.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223141405334.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223141827476.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223141851812.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223142256245.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223142902632.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223143351708.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223144628186.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223145606337.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223150546097.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223151440952.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223152058394.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223152817943.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223153239779.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223153811869.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223154000012.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223154140618.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223154909864.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223155344966.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223155635506.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223160106595.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223160402573.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223160823853.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223161400568.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223161759919.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223163131488.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223163056946.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223163634823.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224175444325.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224180411251.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224180545223.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224180921150.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224181400695.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224182042768.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224183105558.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224183327965.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225140249704.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225141039317.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225141248713.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225141458179.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225142912828.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225143112205.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225143833761.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225144453436.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225144755237.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225144951125.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225145145451.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225145421440.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225150043512.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225150300140.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225150639856.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225150945256.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225151455685.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225152459699.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225153349475.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225153752143.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225154139229.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225154633265.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225155834350.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225160222368.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225160521192.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225160648117.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225160954619.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225161100966.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225161840238.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225162420588.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225162548691.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225163124710.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225164602424.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230303165305564.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306124919075.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306125436218.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306130150738.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306130736526.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306130923523.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306131203459.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306131255848.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306131817274.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306132117204.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306132440982.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306132650138.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306133430732.png">
+<meta property="article:published_time" content="2023-03-06T06:09:53.000Z">
+<meta property="article:modified_time" content="2023-03-06T06:11:13.525Z">
+<meta property="article:author" content="Kanata">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223100113960.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://Kanata369.github.io/2023/03/06/计算机网络笔记-3/"/>
+
+
+
+
+
+  <title>计算机网络笔记-3 | Kanata's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kanata's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Kanata369.github.io/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kanata's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">计算机网络笔记-3</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-03-06T14:09:53+08:00">
+                2023-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">大学学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>第三章</p>
+<span id="more"></span>
+<h1 id="第三章-传输层"><a href="#第三章-传输层" class="headerlink" title="第三章 传输层"></a>第三章 传输层</h1><h2 id="3-1-概述和传输层服务"><a href="#3-1-概述和传输层服务" class="headerlink" title="3.1 概述和传输层服务"></a>3.1 概述和传输层服务</h2><h3 id="传输服务和协议"><a href="#传输服务和协议" class="headerlink" title="传输服务和协议"></a>传输服务和协议</h3><ul>
+<li>为运行在不同主机上的应用进程提供逻辑通信</li>
+<li>传输协议运行在端系统<ul>
+<li>发送方:将应用层的报文分成报文段,然后传递给网络层</li>
+<li>接受方:将报文段重组成报文,然后传递给应用层</li>
+</ul>
+</li>
+<li>有多个传输层协议可供应用选择<ul>
+<li>Internet:TCP和UDP</li>
+</ul>
+</li>
+</ul>
+<h3 id="传输层-VS-网络层"><a href="#传输层-VS-网络层" class="headerlink" title="传输层 VS 网络层"></a>传输层 VS 网络层</h3><ul>
+<li>网络层服务:主机之间的逻辑通信</li>
+<li>传输层服务:进程间的逻辑通信<ul>
+<li>依赖于网络层的服务—延时,带宽(这些服务无法优化)</li>
+<li>并对网络层的服务进行增强—数据丢失,顺序混乱,加密</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223100113960.png" alt="image-20230223100113960"></p>
+<h3 id="Internet传输层协议"><a href="#Internet传输层协议" class="headerlink" title="Internet传输层协议"></a>Internet传输层协议</h3><ul>
+<li>可靠的,保序的传输:TCP<ul>
+<li>多路复用,解复用</li>
+<li>拥塞控制</li>
+<li>流量控制</li>
+<li>建立连接</li>
+</ul>
+</li>
+<li>不可靠,不保序的传输:UDP<ul>
+<li>多路复用,解复用</li>
+<li>没有为尽力而为的IP服务添加更多的其他额外服务</li>
+</ul>
+</li>
+<li>都不提供:<ul>
+<li>延时保证</li>
+<li>带宽保证</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-多路复用和解复用"><a href="#3-2-多路复用和解复用" class="headerlink" title="3.2 多路复用和解复用"></a>3.2 多路复用和解复用</h2><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223101759285.png" alt="image-20230223101759285"></p>
+<h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223101911827.png" alt="image-20230223101911827"></p>
+<h3 id="无连接-UDP-多路解复用"><a href="#无连接-UDP-多路解复用" class="headerlink" title="无连接(UDP)多路解复用"></a>无连接(UDP)多路解复用</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223102027656.png" alt="image-20230223102027656"></p>
+<h3 id="面向连接的解复用"><a href="#面向连接的解复用" class="headerlink" title="面向连接的解复用"></a>面向连接的解复用</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223102507925.png" alt="image-20230223102507925"></p>
+<h2 id="3-3-无连接传输-UDP"><a href="#3-3-无连接传输-UDP" class="headerlink" title="3.3 无连接传输 UDP"></a>3.3 无连接传输 UDP</h2><h3 id="UDP-用户数据报协议"><a href="#UDP-用户数据报协议" class="headerlink" title="UDP:用户数据报协议"></a>UDP:用户数据报协议</h3><p>User Datagram Protocol [RFC 768]</p>
+<ul>
+<li>“no frills”,”bare bones” Internet传输协议</li>
+<li>“尽力而为的服务”,报文段可能丢失,送到应用进程的报文段乱序</li>
+<li>无连接:<ul>
+<li>UDP发送端和接收端之间没有握手</li>
+<li>每个UDP报文段都被独立地处理</li>
+</ul>
+</li>
+</ul>
+<p>UDP被用于:</p>
+<ul>
+<li>流媒体(丢失不敏感,速率敏感,应用可控制传输速率)</li>
+<li>DNS</li>
+<li>SNMP</li>
+</ul>
+<p>在UDP上实现可靠传输:</p>
+<ul>
+<li>在应用层增加可靠性</li>
+<li>应用特定的差错恢复</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223104543262.png" alt="image-20230223104543262"></p>
+<p>校验和:EDC,差错检验码</p>
+<h3 id="UDP校验和"><a href="#UDP校验和" class="headerlink" title="UDP校验和"></a>UDP校验和</h3><p>目标:检测在被传输报文段中的差错(如比特反转)</p>
+<p>发送方:</p>
+<ul>
+<li>将报文段的内容视为一个个16比特的整数,不足的补0</li>
+<li>校验和:报文段的加法和(1的补运输)</li>
+<li>发送方将校验和放在UDP的校验和字段</li>
+</ul>
+<p>接受方:</p>
+<ul>
+<li>计算接受到的报文段的校验和</li>
+<li>检查计算出的校验和与校验和字段的内容是否相等<ul>
+<li>不相等—检测到差错</li>
+<li>相等—没检测到差错,但也许有差错—残存错误</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223105930147.png" alt="image-20230223105930147"></p>
+<p>即最高位进位要进到最低位去,最后结果取反码即为校验和</p>
+<p>在接收方,将包括EDC在内的报文相加起来,为2^(16)-1,则通过校验</p>
+<h2 id="3-4-可靠数据传输-rdt-的原理"><a href="#3-4-可靠数据传输-rdt-的原理" class="headerlink" title="3.4 可靠数据传输(rdt)的原理"></a>3.4 可靠数据传输(rdt)的原理</h2><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223110335755.png" alt="image-20230223110335755"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223110955563.png" alt="image-20230223110955563"></p>
+<p>rdt_rcv大概是打错了,应该都是udt_rcv</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223111442837.png" alt="image-20230223111442837"></p>
+<p>即双向传输化rdt简化成单向传输rdt,而实现单向传输中,控制信息是双向的(需要给出反馈信息)</p>
+<h3 id="Rdt1-0-在可靠信道上的可靠数据传输"><a href="#Rdt1-0-在可靠信道上的可靠数据传输" class="headerlink" title="Rdt1.0: 在可靠信道上的可靠数据传输"></a>Rdt1.0: 在可靠信道上的可靠数据传输</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223111956528.png" alt="image-20230223111956528"></p>
+<p>同理,rdt_rcv应该是udt_rcv,此处应该是打错了</p>
+<h3 id="Rdt2-0-具有比特差错的信道"><a href="#Rdt2-0-具有比特差错的信道" class="headerlink" title="Rdt2.0: 具有比特差错的信道"></a>Rdt2.0: 具有比特差错的信道</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223112449483.png" alt="image-20230223112449483"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223112511642.png" alt="image-20230223112511642"></p>
+<p>Rdt2.1: ACK/NAK出错</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223113014951.png" alt="image-20230223113014951"></p>
+<p>即只要发送方没有接受到正确的ACK,都会重传当前分组,如果发送方已经成功收到该分组(通过分组内的序号识别?),则将其丢弃,再次发送ACK</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223113508171.png" alt="image-20230223113508171"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223113650653.png" alt="image-20230223113650653"></p>
+<p>packet通过校验后,通过序号是0还是1判断是否将数据传递给上层</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223114456837.png" alt="image-20230223114456837"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223114851441.png" alt="image-20230223114851441"></p>
+<h3 id="Rdt2-2-无NAK的协议"><a href="#Rdt2-2-无NAK的协议" class="headerlink" title="Rdt2.2: 无NAK的协议"></a>Rdt2.2: 无NAK的协议</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223141345669.png" alt="image-20230223141345669"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223141405334.png" alt="image-20230223141405334"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223141827476.png" alt="image-20230223141827476"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223141851812.png" alt="image-20230223141851812"></p>
+<p>若ack出现错误,则sender重新发送packet,此时receiver根据packet中的序号判断是否重复</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223142256245.png" alt="image-20230223142256245"></p>
+<h3 id="Rdt3-0-具有比特差错和分组丢失的信道"><a href="#Rdt3-0-具有比特差错和分组丢失的信道" class="headerlink" title="Rdt3.0 :具有比特差错和分组丢失的信道"></a>Rdt3.0 :具有比特差错和分组丢失的信道</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223142902632.png" alt="image-20230223142902632"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223143351708.png" alt="image-20230223143351708"></p>
+<p>要注意等待ACK状态中,接收到错误ACK后,不执行操作,直至超时后才重新发送packet</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223144628186.png" alt="image-20230223144628186"></p>
+<h3 id="流水线协议-提高链路利用率"><a href="#流水线协议-提高链路利用率" class="headerlink" title="流水线协议:提高链路利用率"></a>流水线协议:提高链路利用率</h3><p>超时时间不合理仍能正常工作,但会导致packet都被发送多次</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223145606337.png" alt="image-20230223145606337"></p>
+<p>延迟时间:一个bit从发送方发出,到接受方接受所需要的时间—可以理解成车的行驶时间</p>
+<p>带宽:每秒能发出多少个bit—可以理解为马路宽度,即每秒能发出多少辆车</p>
+<p>由于每次发送需要等待接收方返回控制信息(ACK),就算链路的容量较大,由于每次发送的PDU较小,也无法有效利用其容量,如例子中吞吐量仅为270kbps</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223150546097.png" alt="image-20230223150546097"></p>
+<p>即一次发送多个PDU</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223151440952.png" alt="image-20230223151440952"></p>
+<h3 id="通用-滑动窗口-slide-window-协议"><a href="#通用-滑动窗口-slide-window-协议" class="headerlink" title="通用:滑动窗口(slide window)协议"></a>通用:滑动窗口(slide window)协议</h3><p>发送窗口:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223152058394.png" alt="image-20230223152058394"></p>
+<ol>
+<li>发送窗口SW=1,接受窗口RW=1: S-W(stop and wait)协议—rdt3.0</li>
+<li>发送窗口SW&gt;1,接受窗口RW=1: GBN(回退N步)协议—流水线协议</li>
+<li>发送窗口SW&gt;1,接受窗口RW&gt;1: SR(选择重传)协议—流水线协议</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223152817943.png" alt="image-20230223152817943"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223153239779.png" alt="image-20230223153239779"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223153811869.png" alt="image-20230223153811869"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223154000012.png" alt="image-20230223154000012"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223154140618.png" alt="image-20230223154140618"></p>
+<p>接受窗口:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223154909864.png" alt="image-20230223154909864"></p>
+<p>接受窗口=1,比如罩住1时,若收到非1数据,都返回ACK0,收到1时,则返回ACK1,即GBN协议,只能顺序接受(其ACK包含累计确认的含义,即前X个都成功接收了)</p>
+<p>若接受窗口&gt;1,比如罩住1234,若收到2,则返回ACK2(但只有收到1时,尾沿才能移动),即SR协议</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223155344966.png" alt="image-20230223155344966"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223155635506.png" alt="image-20230223155635506"></p>
+<p>窗口互动:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223160106595.png" alt="image-20230223160106595"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223160402573.png" alt="image-20230223160402573"></p>
+<p>比如发送方一次发送1~5,一共5个PDU,2~5都成功发送,由于GBN其接受窗口大小为1,2~5都被抛弃,然后产生了4个累计确认,然后超时重发机制又使得发送窗口内PDU全被发送一遍</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223160823853.png" alt="image-20230223160823853"></p>
+<p>假设发送了2,3,4,一共3个PDU,其中3,4都被接受到,返回ACK3和ACK4,而2超时,则超时重发机制会将2重新发送(而3,4不需要)</p>
+<h3 id="GBN协议和SR协议的异同"><a href="#GBN协议和SR协议的异同" class="headerlink" title="GBN协议和SR协议的异同"></a>GBN协议和SR协议的异同</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223161400568.png" alt="image-20230223161400568"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223161759919.png" alt="image-20230223161759919"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223163131488.png" alt="image-20230223163131488"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223163056946.png" alt="image-20230223163056946"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230223163634823.png" alt="image-20230223163634823"></p>
+<p>注意返回ACK1后不会立即发送2,而是等2的计时器超时,ACK决定的是窗口的后沿位置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224175444325.png" alt="image-20230224175444325"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224180411251.png" alt="image-20230224180411251"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224180545223.png" alt="image-20230224180545223"></p>
+<p>注意上图中黑框为发送缓冲区的范围(发送后才加入发送窗口开始计时)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224180921150.png" alt="image-20230224180921150"></p>
+<h2 id="3-5-面向连接的传输-TCP"><a href="#3-5-面向连接的传输-TCP" class="headerlink" title="3.5 面向连接的传输: TCP"></a>3.5 面向连接的传输: TCP</h2><h3 id="TCP-概述"><a href="#TCP-概述" class="headerlink" title="TCP:概述"></a>TCP:概述</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224181400695.png" alt="image-20230224181400695"></p>
+<ul>
+<li>全双工:二者可以同时向对方发送数据</li>
+<li>物理链路中载荷大小有限,通过划定最大报文段大小,使数据分块分块后传输</li>
+</ul>
+<h3 id="TCP-报文段结构"><a href="#TCP-报文段结构" class="headerlink" title="TCP:报文段结构"></a>TCP:报文段结构</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224182042768.png" alt="image-20230224182042768"></p>
+<ul>
+<li>注意序号是字节的序号,而不是前文中PDU的序号,如MSS大小为1024B,第一个MSS序号为0,则第二个MSS序号为1024,第n个MSS序号为1024*n(真实情况中,初始序号在握手时决定),而窗口大小也是以字节为单位</li>
+<li>注意接受方若向发送方发送ACK555,则表示554及之前的字节都被成功接受,需要第555个字节(注意与前文差1)</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224183105558.png" alt="image-20230224183105558"></p>
+<ul>
+<li>乱序到达的段既可以丢弃也可以缓存</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230224183327965.png" alt="image-20230224183327965"></p>
+<h3 id="TCP-往返延时-RTT-和超时"><a href="#TCP-往返延时-RTT-和超时" class="headerlink" title="TCP:往返延时(RTT)和超时"></a>TCP:往返延时(RTT)和超时</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225140249704.png" alt="image-20230225140249704"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225141039317.png" alt="image-20230225141039317"></p>
+<p>前i个采样贡献权值为a*(1-a)^i,即呈指数下降</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225141248713.png" alt="image-20230225141248713"></p>
+<h3 id="TCP-可靠数据传递"><a href="#TCP-可靠数据传递" class="headerlink" title="TCP:可靠数据传递"></a>TCP:可靠数据传递</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225141458179.png" alt="image-20230225141458179"></p>
+<p>由重复确认引起的重传称为快速重传(因为还没超时)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225142912828.png" alt="image-20230225142912828"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225143112205.png" alt="image-20230225143112205"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225143833761.png" alt="image-20230225143833761"></p>
+<p>接受方的ACK行为</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225144453436.png" alt="image-20230225144453436"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225144755237.png" alt="image-20230225144755237"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225144951125.png" alt="image-20230225144951125"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225145145451.png" alt="image-20230225145145451"></p>
+<h3 id="TCP-流量控制"><a href="#TCP-流量控制" class="headerlink" title="TCP:流量控制"></a>TCP:流量控制</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225145421440.png" alt="image-20230225145421440"></p>
+<ul>
+<li>通过反馈接受窗口的大小(即缓冲区的空白大小)来控制流量</li>
+<li>通过对报文段结构的学习,我们可以知道,反馈信息(窗口大小,ACK等等)是附带在数据中的(TCP的双向传输特性也支持这一点)</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225150043512.png" alt="image-20230225150043512"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225150300140.png" alt="image-20230225150300140"></p>
+<h3 id="TCP-连接管理"><a href="#TCP-连接管理" class="headerlink" title="TCP:连接管理"></a>TCP:连接管理</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225150639856.png" alt="image-20230225150639856"></p>
+<h4 id="两次握手是否可行"><a href="#两次握手是否可行" class="headerlink" title="两次握手是否可行?"></a>两次握手是否可行?</h4><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225150945256.png" alt="image-20230225150945256"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225151455685.png" alt="image-20230225151455685"></p>
+<p>即双方正常创建连接,关闭连接后,该连接中由于超时导致的重复发送(可能是连接请求,可能是传输的数据)才到达服务器,第一张图中服务器”建立”了一个不存在的连接,而第二张图中服务器不仅”建立”了一个不存在的连接,甚至接受了前一个连接中的老数据作为当前连接的新数据</p>
+<h4 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h4><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225152459699.png" alt="image-20230225152459699"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225153349475.png" alt="image-20230225153349475"></p>
+<ul>
+<li>可以发现,第二次握手表示服务器是活跃的,第三次握手表示客户端是活跃的,因此延迟到达的连接请求会被服务器拒绝,无法建立</li>
+<li>而延迟到达的数据,若socket已经关闭,则服务器不接受该数据;若相同端口,IP地址的socket<strong>再次</strong>打开,由于初始序号不一致,老数据仍被拒绝</li>
+<li>有没有可能老数据的序号与此时的序号恰好一致—有,概率极小</li>
+<li>可以将初始序号同时间周期绑定在一起—仍有可能重复,概率非常非常小,几乎不可能</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225153752143.png" alt="image-20230225153752143"></p>
+<h4 id="连接拆除"><a href="#连接拆除" class="headerlink" title="连接拆除"></a>连接拆除</h4><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225154139229.png" alt="image-20230225154139229"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225154633265.png" alt="image-20230225154633265"></p>
+<ul>
+<li>为什么最后客户端仍有个等待时间—为了确保ack发送到服务器(ack可能发生丢失),服务器接收到ack后就关闭连接,客户端在发送ack一段时间后,才关闭连接</li>
+</ul>
+<h2 id="3-6-拥塞控制原理"><a href="#3-6-拥塞控制原理" class="headerlink" title="3.6 拥塞控制原理"></a>3.6 拥塞控制原理</h2><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225155834350.png" alt="image-20230225155834350"></p>
+<p>与流量控制的差别:流量控制是”我”到”你”的问题,即单对单,而拥塞控制是整个网络的问题(多到多)</p>
+<h3 id="拥塞场景-代价1"><a href="#拥塞场景-代价1" class="headerlink" title="拥塞场景/代价1"></a>拥塞场景/代价1</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225160222368.png" alt="image-20230225160222368"></p>
+<h3 id="拥塞场景-代价2"><a href="#拥塞场景-代价2" class="headerlink" title="拥塞场景/代价2"></a>拥塞场景/代价2</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225160521192.png" alt="image-20230225160521192"></p>
+<ul>
+<li>传输层输出大于应用层输出</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225160648117.png" alt="image-20230225160648117"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225160954619.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225161100966.png" alt="image-20230225161100966"></p>
+<ul>
+<li>因为拥塞,即使数据没有丢失也发生了超时,此时链路中存在多个相同的分组—浪费,同时加剧拥塞</li>
+</ul>
+<h3 id="拥塞场景-代价3"><a href="#拥塞场景-代价3" class="headerlink" title="拥塞场景/代价3"></a>拥塞场景/代价3</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225161840238.png" alt="image-20230225161840238"></p>
+<ul>
+<li>蓝色的流量经过第一个路由器过滤,当发生拥塞时,蓝色经过的第二个路由器,其吞吐量被红色占据,蓝色吞吐量几乎为0,而红色在其经过的第二个路由器,该路由器吞吐量又几乎被绿色的流量占据,故红色的吞吐量也几乎为0</li>
+<li>出现”死锁”</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225162420588.png" alt="image-20230225162420588"></p>
+<h3 id="拥塞控制方法"><a href="#拥塞控制方法" class="headerlink" title="拥塞控制方法"></a>拥塞控制方法</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225162548691.png" alt="image-20230225162548691"></p>
+<h3 id="网络辅助的拥塞控制"><a href="#网络辅助的拥塞控制" class="headerlink" title="网络辅助的拥塞控制"></a>网络辅助的拥塞控制</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225163124710.png" alt="image-20230225163124710"></p>
+<p>信元: 53个字节,其中5个字节是头部(非常小,所以传输得很快,比bit大,比分组小)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230225164602424.png" alt="image-20230225164602424"></p>
+<h2 id="3-7-TCP拥塞控制"><a href="#3-7-TCP拥塞控制" class="headerlink" title="3.7 TCP拥塞控制"></a>3.7 TCP拥塞控制</h2><p>因为网络辅助的拥塞控制,给网络带来的压力较大(附加了控制信息),所以TCP采用端到端的拥塞控制</p>
+<h3 id="TCP拥塞控制-机制"><a href="#TCP拥塞控制-机制" class="headerlink" title="TCP拥塞控制:机制"></a>TCP拥塞控制:机制</h3><p>端到端的拥塞控制机制</p>
+<ul>
+<li>路由器不向主机提供有关拥塞的反馈信息<ul>
+<li>路由器的负担较轻</li>
+<li>符合网络核心简单的TCP/IP架构原则(将问题放在端系统解决)</li>
+</ul>
+</li>
+<li>端系统根据自身得到的信息,判断是否发生拥塞,从而采取动作</li>
+</ul>
+<p>几个问题</p>
+<ul>
+<li>如何检测拥塞<ul>
+<li>轻微拥塞</li>
+<li>拥塞</li>
+</ul>
+</li>
+<li>控制策略<ul>
+<li>在拥塞发生时如何动作,降低速率<ul>
+<li>轻微拥塞时,如何降低</li>
+<li>拥塞时,如何降低</li>
+</ul>
+</li>
+<li>在拥塞缓解时如何动作,增加速率</li>
+</ul>
+</li>
+</ul>
+<h3 id="TCP拥塞控制-拥塞感知"><a href="#TCP拥塞控制-拥塞感知" class="headerlink" title="TCP拥塞控制:拥塞感知"></a>TCP拥塞控制:拥塞感知</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230303165305564.png" alt="image-20230303165305564"></p>
+<h3 id="TCP拥塞控制-速率控制方法"><a href="#TCP拥塞控制-速率控制方法" class="headerlink" title="TCP拥塞控制:速率控制方法"></a>TCP拥塞控制:速率控制方法</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306124919075.png" alt="image-20230306124919075"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306125436218.png" alt="image-20230306125436218"></p>
+<p>(MSS:最大报文段长度)</p>
+<p>即发生超时时,先降为1,然后倍增到原来CongWin的1/2(每个RTT增加1倍),然后开始线性增长</p>
+<p>若出现轻微拥塞,则直接降为CongWin的1/2,然后线性增长</p>
+<h3 id="TCP拥塞控制和流量控制的联合动作"><a href="#TCP拥塞控制和流量控制的联合动作" class="headerlink" title="TCP拥塞控制和流量控制的联合动作"></a>TCP拥塞控制和流量控制的联合动作</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306130150738.png" alt="image-20230306130150738"></p>
+<h3 id="TCP拥塞控制-策略概述"><a href="#TCP拥塞控制-策略概述" class="headerlink" title="TCP拥塞控制:策略概述"></a>TCP拥塞控制:策略概述</h3><ul>
+<li>慢启动</li>
+<li>AIMD:线性增,乘性减少</li>
+<li>超时事件后的保守策略</li>
+</ul>
+<p>TCP慢启动</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306130736526.png" alt="image-20230306130736526"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306130923523.png" alt="image-20230306130923523"></p>
+<p>AIMD</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306131203459.png" alt="image-20230306131203459"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306131255848.png" alt="image-20230306131255848"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306131817274.png" alt="image-20230306131817274"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306132117204.png" alt="image-20230306132117204"></p>
+<h3 id="TCP吞吐量"><a href="#TCP吞吐量" class="headerlink" title="TCP吞吐量"></a>TCP吞吐量</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306132440982.png" alt="image-20230306132440982"></p>
+<h3 id="TCP公平性"><a href="#TCP公平性" class="headerlink" title="TCP公平性"></a>TCP公平性</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306132650138.png" alt="image-20230306132650138"></p>
+<p>每次发送拥塞,窗口大小要除2,则TCP会话之间的窗口大小之差也除2,指数级趋向于0,故每一个会话的有效带宽相同</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230306133430732.png" alt="image-20230306133430732"></p>
+<p>UDP不受拥塞控制节制—对TCP不友好</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-2/" rel="next" title="计算机网络笔记-2">
+                <i class="fa fa-chevron-left"></i> 计算机网络笔记-2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1496089152&auto=0&height=66"></iframe>
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/">
+              
+                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/dyg-55" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Zhihu</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://tangdouer.cn" title="糖豆儿" target="_blank">糖豆儿</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%BC%A0%E8%BE%93%E5%B1%82"><span class="nav-number">1.</span> <span class="nav-text">第三章 传输层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E6%A6%82%E8%BF%B0%E5%92%8C%E4%BC%A0%E8%BE%93%E5%B1%82%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.1.</span> <span class="nav-text">3.1 概述和传输层服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.1.1.</span> <span class="nav-text">传输服务和协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E5%B1%82-VS-%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="nav-number">1.1.2.</span> <span class="nav-text">传输层 VS 网络层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Internet%E4%BC%A0%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.1.3.</span> <span class="nav-text">Internet传输层协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E5%92%8C%E8%A7%A3%E5%A4%8D%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">3.2 多路复用和解复用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">1.2.1.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E8%BF%9E%E6%8E%A5-UDP-%E5%A4%9A%E8%B7%AF%E8%A7%A3%E5%A4%8D%E7%94%A8"><span class="nav-number">1.2.2.</span> <span class="nav-text">无连接(UDP)多路解复用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E8%BF%9E%E6%8E%A5%E7%9A%84%E8%A7%A3%E5%A4%8D%E7%94%A8"><span class="nav-number">1.2.3.</span> <span class="nav-text">面向连接的解复用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E6%97%A0%E8%BF%9E%E6%8E%A5%E4%BC%A0%E8%BE%93-UDP"><span class="nav-number">1.3.</span> <span class="nav-text">3.3 无连接传输 UDP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP-%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8A%A5%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.3.1.</span> <span class="nav-text">UDP:用户数据报协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP%E6%A0%A1%E9%AA%8C%E5%92%8C"><span class="nav-number">1.3.2.</span> <span class="nav-text">UDP校验和</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E5%8F%AF%E9%9D%A0%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93-rdt-%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-number">1.4.</span> <span class="nav-text">3.4 可靠数据传输(rdt)的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Rdt1-0-%E5%9C%A8%E5%8F%AF%E9%9D%A0%E4%BF%A1%E9%81%93%E4%B8%8A%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93"><span class="nav-number">1.4.1.</span> <span class="nav-text">Rdt1.0: 在可靠信道上的可靠数据传输</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rdt2-0-%E5%85%B7%E6%9C%89%E6%AF%94%E7%89%B9%E5%B7%AE%E9%94%99%E7%9A%84%E4%BF%A1%E9%81%93"><span class="nav-number">1.4.2.</span> <span class="nav-text">Rdt2.0: 具有比特差错的信道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rdt2-2-%E6%97%A0NAK%E7%9A%84%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.4.3.</span> <span class="nav-text">Rdt2.2: 无NAK的协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rdt3-0-%E5%85%B7%E6%9C%89%E6%AF%94%E7%89%B9%E5%B7%AE%E9%94%99%E5%92%8C%E5%88%86%E7%BB%84%E4%B8%A2%E5%A4%B1%E7%9A%84%E4%BF%A1%E9%81%93"><span class="nav-number">1.4.4.</span> <span class="nav-text">Rdt3.0 :具有比特差错和分组丢失的信道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE-%E6%8F%90%E9%AB%98%E9%93%BE%E8%B7%AF%E5%88%A9%E7%94%A8%E7%8E%87"><span class="nav-number">1.4.5.</span> <span class="nav-text">流水线协议:提高链路利用率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E7%94%A8-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3-slide-window-%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.4.6.</span> <span class="nav-text">通用:滑动窗口(slide window)协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GBN%E5%8D%8F%E8%AE%AE%E5%92%8CSR%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%BC%82%E5%90%8C"><span class="nav-number">1.4.7.</span> <span class="nav-text">GBN协议和SR协议的异同</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E9%9D%A2%E5%90%91%E8%BF%9E%E6%8E%A5%E7%9A%84%E4%BC%A0%E8%BE%93-TCP"><span class="nav-number">1.5.</span> <span class="nav-text">3.5 面向连接的传输: TCP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-%E6%A6%82%E8%BF%B0"><span class="nav-number">1.5.1.</span> <span class="nav-text">TCP:概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-%E6%8A%A5%E6%96%87%E6%AE%B5%E7%BB%93%E6%9E%84"><span class="nav-number">1.5.2.</span> <span class="nav-text">TCP:报文段结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-%E5%BE%80%E8%BF%94%E5%BB%B6%E6%97%B6-RTT-%E5%92%8C%E8%B6%85%E6%97%B6"><span class="nav-number">1.5.3.</span> <span class="nav-text">TCP:往返延时(RTT)和超时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-%E5%8F%AF%E9%9D%A0%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92"><span class="nav-number">1.5.4.</span> <span class="nav-text">TCP:可靠数据传递</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="nav-number">1.5.5.</span> <span class="nav-text">TCP:流量控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86"><span class="nav-number">1.5.6.</span> <span class="nav-text">TCP:连接管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%A4%E6%AC%A1%E6%8F%A1%E6%89%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C"><span class="nav-number">1.5.6.1.</span> <span class="nav-text">两次握手是否可行?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="nav-number">1.5.6.2.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%8B%86%E9%99%A4"><span class="nav-number">1.5.6.3.</span> <span class="nav-text">连接拆除</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86"><span class="nav-number">1.6.</span> <span class="nav-text">3.6 拥塞控制原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%A5%E5%A1%9E%E5%9C%BA%E6%99%AF-%E4%BB%A3%E4%BB%B71"><span class="nav-number">1.6.1.</span> <span class="nav-text">拥塞场景&#x2F;代价1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%A5%E5%A1%9E%E5%9C%BA%E6%99%AF-%E4%BB%A3%E4%BB%B72"><span class="nav-number">1.6.2.</span> <span class="nav-text">拥塞场景&#x2F;代价2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%A5%E5%A1%9E%E5%9C%BA%E6%99%AF-%E4%BB%A3%E4%BB%B73"><span class="nav-number">1.6.3.</span> <span class="nav-text">拥塞场景&#x2F;代价3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95"><span class="nav-number">1.6.4.</span> <span class="nav-text">拥塞控制方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%BE%85%E5%8A%A9%E7%9A%84%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6"><span class="nav-number">1.6.5.</span> <span class="nav-text">网络辅助的拥塞控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-7-TCP%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6"><span class="nav-number">1.7.</span> <span class="nav-text">3.7 TCP拥塞控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6-%E6%9C%BA%E5%88%B6"><span class="nav-number">1.7.1.</span> <span class="nav-text">TCP拥塞控制:机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6-%E6%8B%A5%E5%A1%9E%E6%84%9F%E7%9F%A5"><span class="nav-number">1.7.2.</span> <span class="nav-text">TCP拥塞控制:拥塞感知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6-%E9%80%9F%E7%8E%87%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95"><span class="nav-number">1.7.3.</span> <span class="nav-text">TCP拥塞控制:速率控制方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E5%92%8C%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E8%81%94%E5%90%88%E5%8A%A8%E4%BD%9C"><span class="nav-number">1.7.4.</span> <span class="nav-text">TCP拥塞控制和流量控制的联合动作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6-%E7%AD%96%E7%95%A5%E6%A6%82%E8%BF%B0"><span class="nav-number">1.7.5.</span> <span class="nav-text">TCP拥塞控制:策略概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E5%90%9E%E5%90%90%E9%87%8F"><span class="nav-number">1.7.6.</span> <span class="nav-text">TCP吞吐量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E5%85%AC%E5%B9%B3%E6%80%A7"><span class="nav-number">1.7.7.</span> <span class="nav-text">TCP公平性</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kanata</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	//下面的HTML-CSS和SVG用于在小屏幕上，数学公式可以自动换行，我测试过后发现无效，但是貌似有人可以。
+	"HTML-CSS": { 
+		linebreaks: { 
+			automatic: true 
+		} 
+	},SVG: {
+		linebreaks: { 
+			automatic: true 
+		}
+	},menuSettings: {
+		zoom: "None"
+	},
+	showMathMenu: false,
+	jax: ["input/TeX","output/CommonHTML"],
+	extensions: ["tex2jax.js"],
+	TeX: {
+		extensions: ["AMSmath.js","AMSsymbols.js"],
+		equationNumbers: {
+			autoNumber: "AMS"
+		}
+	},tex2jax: {
+		inlineMath: [["\\(", "\\)"]],
+		displayMath: [["\\[", "\\]"]]
+	}
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"scale":1.5,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>
