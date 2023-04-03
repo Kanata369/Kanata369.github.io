@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/k(180x180).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/k(32x32).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/k(16x16).png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logok.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="第六章">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络笔记-6">
+<meta property="og:url" content="https://kanata369.github.io/2023/03/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-6/index.html">
+<meta property="og:site_name" content="Kanata&#39;s blog">
+<meta property="og:description" content="第六章">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316194320748.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316200901519.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316201029227.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316201721865.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316202046197.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316202525775.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316202656739.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316203122813.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316203321090.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316203430608.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316203714627.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316203841995.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316204009706.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316204104619.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316204829487.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316210048102.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317003753211.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316220222487.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316220428204.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316220723222.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316220918687.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316221320109.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316221358261.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316221415984.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316221623823.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316221811162.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316222304130.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316222451871.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316222755547.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316222916452.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316223715076.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316223928517.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316224257033.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316224312244.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316225409920.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316225448457.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316232919016.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316233200120.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316235139368.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316235858309.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317000402742.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317000558298.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317000726000.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317002402939.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317002934210.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317003603315.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317171946320.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317172202314.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317172824273.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317173022791.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317173943694.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317174040446.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317174329580.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317174546143.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317174851186.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175222337.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175326326.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175509903.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175553830.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175651782.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175823241.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317180238246.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181254999.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181438669.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181537541.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181845683.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181910258.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181945887.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318224837787.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318225104450.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318225140275.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318225811368.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318225953094.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318230120460.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318230917016.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318231358570.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318231709990.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318232057141.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318232135690.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318232615691.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318233046482.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318233123428.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318233230080.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318233931472.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318234220647.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318234649734.png">
+<meta property="article:published_time" content="2023-03-14T15:57:35.000Z">
+<meta property="article:modified_time" content="2023-03-27T07:38:42.243Z">
+<meta property="article:author" content="Kanata">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316194320748.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://Kanata369.github.io/2023/03/14/计算机网络笔记-6/"/>
+
+
+
+
+
+  <title>计算机网络笔记-6 | Kanata's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kanata's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Kanata369.github.io/2023/03/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kanata's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">计算机网络笔记-6</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-03-14T23:57:35+08:00">
+                2023-03-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">大学学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>第六章</p>
+<span id="more"></span>
+<h1 id="第6章-链路层和局域网"><a href="#第6章-链路层和局域网" class="headerlink" title="第6章: 链路层和局域网"></a>第6章: 链路层和局域网</h1><h2 id="6-1-引论和服务"><a href="#6-1-引论和服务" class="headerlink" title="6.1 引论和服务"></a>6.1 引论和服务</h2><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316194320748.png" alt="image-20230316194320748"></p>
+<h3 id="网络节点的连接方式"><a href="#网络节点的连接方式" class="headerlink" title="网络节点的连接方式"></a>网络节点的连接方式</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316200901519.png" alt="image-20230316200901519"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316201029227.png" alt="image-20230316201029227"></p>
+<h3 id="链路层-导论"><a href="#链路层-导论" class="headerlink" title="链路层: 导论"></a>链路层: 导论</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316201721865.png" alt="image-20230316201721865"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316202046197.png" alt="image-20230316202046197"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316202525775.png" alt=""></p>
+<p>即特定到某个具体的链路层,其提供的传输可能是不可靠传输,如以太网(出错率低)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316202656739.png" alt="image-20230316202656739"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316203122813.png" alt="image-20230316203122813"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316203321090.png" alt="image-20230316203321090"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316203430608.png" alt="image-20230316203430608"></p>
+<h2 id="6-2-差错检测和纠正"><a href="#6-2-差错检测和纠正" class="headerlink" title="6.2 差错检测和纠正"></a>6.2 差错检测和纠正</h2><p>在较可靠的信道中传输,我们通常采用差错检测,检测到差错直接进行重传</p>
+<p>在较不可靠的信道中传输,我们通常采用差错纠正(如奇偶校验),检测到差错尽量还原,重传耗费过大</p>
+<h3 id="错误检测"><a href="#错误检测" class="headerlink" title="错误检测"></a>错误检测</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316203714627.png" alt="image-20230316203714627"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316203841995.png" alt="image-20230316203841995"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316204009706.png" alt="image-20230316204009706"></p>
+<h3 id="检验和-CRC-循环冗余校验"><a href="#检验和-CRC-循环冗余校验" class="headerlink" title="检验和: CRC(循环冗余校验)"></a>检验和: CRC(循环冗余校验)</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316204104619.png" alt="image-20230316204104619"></p>
+<p>位串的多项式表示:如1011=x^3+x+1</p>
+<p>注意若R为r位,则G为r+1位(生成一个r次方的多项式),保证能产生一个小于等于r位的R(见下文例子)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316204829487.png" alt="image-20230316204829487"></p>
+<p>即类似除法运算中的余数</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316210048102.png" alt="image-20230316210048102"></p>
+<h2 id="6-3-多点访问协议"><a href="#6-3-多点访问协议" class="headerlink" title="6.3 多点访问协议"></a>6.3 多点访问协议</h2><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317003753211.png" alt="image-20230317003753211"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316220222487.png" alt="image-20230316220222487"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316220428204.png" alt="image-20230316220428204"></p>
+<p>注意,只有一个信道,即控制信息和数据都用一个信道传输</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316220723222.png" alt="image-20230316220723222"></p>
+<h3 id="MAC-媒体访问控制-协议的分类"><a href="#MAC-媒体访问控制-协议的分类" class="headerlink" title="MAC(媒体访问控制)协议的分类"></a>MAC(媒体访问控制)协议的分类</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316220918687.png" alt="image-20230316220918687"></p>
+<p>随机访问:规定了冲突后如何恢复</p>
+<p>依次轮流:有完全分布式(无主节点,采用令牌方式),有中央主节点(主节点管理其他节点是否传输)</p>
+<h3 id="信道划分MAC协议"><a href="#信道划分MAC协议" class="headerlink" title="信道划分MAC协议"></a>信道划分MAC协议</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316221320109.png" alt="image-20230316221320109"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316221358261.png" alt="image-20230316221358261"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316221415984.png" alt="image-20230316221415984"></p>
+<p>CDMA:发送的数据之间彼此正交,可以提取出来</p>
+<h3 id="随机存取MAC协议"><a href="#随机存取MAC协议" class="headerlink" title="随机存取MAC协议"></a>随机存取MAC协议</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316221623823.png" alt="image-20230316221623823"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316221811162.png" alt="image-20230316221811162"></p>
+<p>冲突检测:有线介质中,传输时信道能量发生变化(多个节点传输时,能量变化幅度也不同)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316222304130.png" alt="image-20230316222304130"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316222451871.png" alt="image-20230316222451871"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316222755547.png" alt="image-20230316222755547"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316222916452.png" alt="image-20230316222916452"></p>
+<p>如何提高信道利用率—carrier sense(CS):在发送前侦听一下信道,若当前信道有数据传输,则不发送数据</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316223715076.png" alt=""></p>
+<p>节点帧听的是自身位置的传输—节点之间距离越长,发送冲突的概率越大</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316223928517.png" alt="image-20230316223928517"></p>
+<p>CSMA:说之前听</p>
+<p>CD:边说边听,检测到冲突则立即停止传输,提高信道利用率</p>
+<p>以太网采取的就是CSMA/CD方式</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316224257033.png" alt="image-20230316224257033"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316224312244.png" alt="image-20230316224312244"></p>
+<p>Jam信号:可能冲突时间极短,导致其他节点不知道发生了冲突—强化冲突</p>
+<p>二进制指数退避算法:自适应算法,载荷越大,发生冲突概率越大,窗口大小越大</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316225409920.png" alt="image-20230316225409920"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316225448457.png" alt="image-20230316225448457"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316232919016.png" alt="image-20230316232919016"></p>
+<p>CSMA:冲突避免,因为冲突检测在无线网络中不好使<img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316233200120.png" alt="image-20230316233200120"></p>
+<p>冲突了也可能成功,不冲突也可能不成功</p>
+<p>图中A,C发出的信号在B处发生冲突,但A,C均检测不到冲突</p>
+<p>故不做信道冲突检测,而是在发送前进行侦听</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316235139368.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230316235858309.png" alt="image-20230316235858309"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317000402742.png" alt="image-20230317000402742"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317000558298.png" alt="image-20230317000558298"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317000726000.png" alt="image-20230317000726000"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317002402939.png" alt="image-20230317002402939"></p>
+<p>下行不存在竞争—只有CMTS一个用户(往下发,所有的节点都能收到,比较地址来确认接不接受)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317002934210.png" alt="image-20230317002934210"></p>
+<p>冲突:都预约同一时隙,CMTS无法收到预约请求,采用二进制退避的方式,一定时间后再请求</p>
+<p>预约成功标志:CMTS发布其预约成功消息</p>
+<h3 id="依次轮流-Taking-Turns-MAC协议"><a href="#依次轮流-Taking-Turns-MAC协议" class="headerlink" title="依次轮流(Taking Turns)MAC协议"></a>依次轮流(Taking Turns)MAC协议</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317003603315.png" alt="image-20230317003603315"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317171946320.png" alt="image-20230317171946320"></p>
+<p>可靠性不好—主节点失效</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317172202314.png" alt="image-20230317172202314"></p>
+<p>改善方法:取消主节点,采用令牌</p>
+<p>节点要发送数据时,先”抓住”令牌,将标志位置1,表示令牌帧变成数据帧,加入要传输的数据后,继续循环,接收方收到数据帧后,将数据复制,在相应标志位置1表示收到数据,最后数据帧回到发送方(为什么最终要回到发送方:可能有多个接收方)</p>
+<h3 id="MAC协议总结"><a href="#MAC协议总结" class="headerlink" title="MAC协议总结"></a>MAC协议总结</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317172824273.png" alt="image-20230317172824273"></p>
+<p>如果想要做到不碰撞即发送成功—帧在链路中存在的时间至少要为2t(t为节点最长距离的传播延迟)—因为若采用侦听,在帧发送后,发送方最晚检测到冲突的时间即为2t</p>
+<h2 id="6-4-LANs"><a href="#6-4-LANs" class="headerlink" title="6.4 LANs"></a>6.4 LANs</h2><h3 id="MAC地址和ARP"><a href="#MAC地址和ARP" class="headerlink" title="MAC地址和ARP"></a>MAC地址和ARP</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317173022791.png" alt="image-20230317173022791"></p>
+<p>通过ARP协议获取下一跳IP地址所对应MAC地址(MAC地址作用:在物理网络内部标示每一个节点)</p>
+<p>IP地址是分层的(子网),而MAC地址是平面的(用来标示不同网卡)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317173943694.png" alt="image-20230317173943694"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317174040446.png" alt="image-20230317174040446"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317174329580.png" alt="image-20230317174329580"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317174546143.png" alt="image-20230317174546143"></p>
+<h3 id="ARP协议-Address-Resolution-Protocol"><a href="#ARP协议-Address-Resolution-Protocol" class="headerlink" title="ARP协议:Address Resolution Protocol"></a>ARP协议:Address Resolution Protocol</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317174851186.png" alt="image-20230317174851186"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175222337.png" alt="image-20230317175222337"></p>
+<p>通过广播mac地址(即FF-FF-FF-FF-FF-FF)询问IP地址对应MAC地址</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175326326.png" alt="image-20230317175326326"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175509903.png" alt="image-20230317175509903"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175553830.png" alt="image-20230317175553830"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175651782.png" alt="image-20230317175651782"></p>
+<h3 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317175823241.png" alt="image-20230317175823241"></p>
+<p>在线缆两侧要加”吸收器”,防止能量反弹,对信道侦听造成干扰</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317180238246.png" alt="image-20230317180238246"></p>
+<p>HUB收到数据后,向所有端口发,所以从逻辑上看仍是总线型(节点在使用信道前仍要侦听)</p>
+<p>优化:switch收到数据后,将数据存储下来,只转发到目标端口(可以多个数据同时发送接受)—效率高得多,尤其是高负载的情况下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181254999.png" alt="image-20230317181254999"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181438669.png" alt="image-20230317181438669"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181537541.png" alt="image-20230317181537541"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181845683.png" alt=""></p>
+<p>BASE:基带信号,即信号不做调制</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181910258.png" alt="image-20230317181910258"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230317181945887.png" alt="image-20230317181945887"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318224837787.png" alt="image-20230318224837787"></p>
+<p>双绞线：两个绝缘导体扭和而成(为了防止串扰)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318225104450.png" alt="image-20230318225104450"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318225140275.png" alt="image-20230318225140275"></p>
+<p>Manchester编码过于极端,效率仅有50%(用俩次跳变表示一位数据)</p>
+<p>故可采用4b5b编码</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318225811368.png" alt="image-20230318225811368"></p>
+<p>最多连续4个bit相同,就会出现跳变(有利于同步时钟)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318225953094.png" alt="image-20230318225953094"></p>
+<p>8b10b编码:原理差不多</p>
+<h3 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318230120460.png" alt="image-20230318230120460"></p>
+<p>通过HUB级联的站点都处在一个碰撞域内(所以10BaseT和100BaseT的网络不能接到一起)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318230917016.png" alt="image-20230318230917016"></p>
+<p>如果有多个站点同时向某个站点发送数据—交换机存储这些数据,一个个发送</p>
+<p>交换机透明—一跳可能经过了若干个交换机</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318231358570.png" alt="image-20230318231358570"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318231709990.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318232057141.png" alt=""></p>
+<p>表项一段时间后会删除(因为可能会发生变化)</p>
+<p>如果不知道目标MAC地址的对应端口—泛洪,对所有的端口转发该数据(不能有环)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318232135690.png" alt="image-20230318232135690"></p>
+<p>如果目标MAC地址对应端口就是数据的源端口,则扔掉该数据,不进行转发</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318232615691.png" alt="image-20230318232615691"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318233046482.png" alt="image-20230318233046482"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318233123428.png" alt="image-20230318233123428"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318233230080.png" alt="image-20230318233230080"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318233931472.png" alt="image-20230318233931472"></p>
+<h3 id="VLans"><a href="#VLans" class="headerlink" title="VLans"></a>VLans</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318234220647.png" alt="image-20230318234220647"></p>
+<h2 id="6-5-链路虚拟化-MPLS"><a href="#6-5-链路虚拟化-MPLS" class="headerlink" title="6.5 链路虚拟化:MPLS"></a>6.5 链路虚拟化:MPLS</h2><p>略</p>
+<h2 id="6-6-数据中心网络"><a href="#6-6-数据中心网络" class="headerlink" title="6.6 数据中心网络"></a>6.6 数据中心网络</h2><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230318234649734.png" alt="image-20230318234649734"></p>
+<p>要求:高带宽 低延迟 高可靠性</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/03/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-5/" rel="next" title="计算机网络笔记-5">
+                <i class="fa fa-chevron-left"></i> 计算机网络笔记-5
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2023/04/02/Polya%E5%AE%9A%E7%90%86/" rel="prev" title="Polya定理">
+                Polya定理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1496089152&auto=0&height=66"></iframe>
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/">
+              
+                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/dyg-55" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Zhihu</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://tangdouer.cn" title="糖豆儿" target="_blank">糖豆儿</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://gdgao.top/" title="果冻" target="_blank">果冻</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC6%E7%AB%A0-%E9%93%BE%E8%B7%AF%E5%B1%82%E5%92%8C%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="nav-number">1.</span> <span class="nav-text">第6章: 链路层和局域网</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-%E5%BC%95%E8%AE%BA%E5%92%8C%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.1.</span> <span class="nav-text">6.1 引论和服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%8A%82%E7%82%B9%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.1.</span> <span class="nav-text">网络节点的连接方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E8%B7%AF%E5%B1%82-%E5%AF%BC%E8%AE%BA"><span class="nav-number">1.1.2.</span> <span class="nav-text">链路层: 导论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E5%B7%AE%E9%94%99%E6%A3%80%E6%B5%8B%E5%92%8C%E7%BA%A0%E6%AD%A3"><span class="nav-number">1.2.</span> <span class="nav-text">6.2 差错检测和纠正</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E6%A3%80%E6%B5%8B"><span class="nav-number">1.2.1.</span> <span class="nav-text">错误检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E9%AA%8C%E5%92%8C-CRC-%E5%BE%AA%E7%8E%AF%E5%86%97%E4%BD%99%E6%A0%A1%E9%AA%8C"><span class="nav-number">1.2.2.</span> <span class="nav-text">检验和: CRC(循环冗余校验)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-%E5%A4%9A%E7%82%B9%E8%AE%BF%E9%97%AE%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.3.</span> <span class="nav-text">6.3 多点访问协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MAC-%E5%AA%92%E4%BD%93%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6-%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.3.1.</span> <span class="nav-text">MAC(媒体访问控制)协议的分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%A1%E9%81%93%E5%88%92%E5%88%86MAC%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.3.2.</span> <span class="nav-text">信道划分MAC协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96MAC%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.3.3.</span> <span class="nav-text">随机存取MAC协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%9D%E6%AC%A1%E8%BD%AE%E6%B5%81-Taking-Turns-MAC%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.3.4.</span> <span class="nav-text">依次轮流(Taking Turns)MAC协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MAC%E5%8D%8F%E8%AE%AE%E6%80%BB%E7%BB%93"><span class="nav-number">1.3.5.</span> <span class="nav-text">MAC协议总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-LANs"><span class="nav-number">1.4.</span> <span class="nav-text">6.4 LANs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MAC%E5%9C%B0%E5%9D%80%E5%92%8CARP"><span class="nav-number">1.4.1.</span> <span class="nav-text">MAC地址和ARP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP%E5%8D%8F%E8%AE%AE-Address-Resolution-Protocol"><span class="nav-number">1.4.2.</span> <span class="nav-text">ARP协议:Address Resolution Protocol</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5%E5%A4%AA%E7%BD%91"><span class="nav-number">1.4.3.</span> <span class="nav-text">以太网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A4%E6%8D%A2%E6%9C%BA"><span class="nav-number">1.4.4.</span> <span class="nav-text">交换机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VLans"><span class="nav-number">1.4.5.</span> <span class="nav-text">VLans</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-%E9%93%BE%E8%B7%AF%E8%99%9A%E6%8B%9F%E5%8C%96-MPLS"><span class="nav-number">1.5.</span> <span class="nav-text">6.5 链路虚拟化:MPLS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%BD%91%E7%BB%9C"><span class="nav-number">1.6.</span> <span class="nav-text">6.6 数据中心网络</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kanata</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	//下面的HTML-CSS和SVG用于在小屏幕上，数学公式可以自动换行，我测试过后发现无效，但是貌似有人可以。
+	"HTML-CSS": { 
+		linebreaks: { 
+			automatic: true 
+		} 
+	},SVG: {
+		linebreaks: { 
+			automatic: true 
+		}
+	},menuSettings: {
+		zoom: "None"
+	},
+	showMathMenu: false,
+	jax: ["input/TeX","output/CommonHTML"],
+	extensions: ["tex2jax.js"],
+	TeX: {
+		extensions: ["AMSmath.js","AMSsymbols.js"],
+		equationNumbers: {
+			autoNumber: "AMS"
+		}
+	},tex2jax: {
+		inlineMath: [["\\(", "\\)"]],
+		displayMath: [["\\[", "\\]"]]
+	}
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"scale":1.5,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>

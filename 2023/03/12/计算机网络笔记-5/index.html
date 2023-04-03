@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/k(180x180).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/k(32x32).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/k(16x16).png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logok.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="第五章">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络笔记-5">
+<meta property="og:url" content="https://kanata369.github.io/2023/03/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-5/index.html">
+<meta property="og:site_name" content="Kanata&#39;s blog">
+<meta property="og:description" content="第五章">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230312232644414.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230312232948907.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230312233208066.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313183322987.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313183414404.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313183641333.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313183918703.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313184301189.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313190813387.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313191013065.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313191434140.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313191510514.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313191528988.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313191936730.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313192217654.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313192616944.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313192854461.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313193315920.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313203720619.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204144581.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204258242.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204338190.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204434615.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204805507.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204906573.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205029073.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205245929.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205307339.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205425372.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205633294.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205713943.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205936200.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313211139282.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313214617092.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313214810626.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215005911.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215116420.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215126377.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215212557.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215455953.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215711955.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215849080.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313220118697.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314195431907.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314195812689.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314200507928.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314200710726.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314201329930.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314201749755.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314202023311.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314202326698.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314202407924.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210135840.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210219020.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210353908.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210521130.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210722094.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210826711.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314211055162.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314213447914.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314213458514.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314213546780.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314213636011.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314213832768.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314214031794.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314234539445.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314234626873.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314234718913.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314234845083.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314235033824.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314235135772.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314235227877.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314235247405.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314235322740.png">
+<meta property="article:published_time" content="2023-03-12T15:22:11.000Z">
+<meta property="article:modified_time" content="2023-03-14T15:57:02.239Z">
+<meta property="article:author" content="Kanata">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230312232644414.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://Kanata369.github.io/2023/03/12/计算机网络笔记-5/"/>
+
+
+
+
+
+  <title>计算机网络笔记-5 | Kanata's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kanata's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Kanata369.github.io/2023/03/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kanata's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">计算机网络笔记-5</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-03-12T23:22:11+08:00">
+                2023-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">大学学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>第五章</p>
+<span id="more"></span>
+<h1 id="第5章-网络层控制平面"><a href="#第5章-网络层控制平面" class="headerlink" title="第5章: 网络层控制平面"></a>第5章: 网络层控制平面</h1><h2 id="5-2-路由选择算法"><a href="#5-2-路由选择算法" class="headerlink" title="5.2 路由选择算法"></a>5.2 路由选择算法</h2><h3 id="路由协议"><a href="#路由协议" class="headerlink" title="路由协议"></a>路由协议</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230312232644414.png" alt="image-20230312232644414"></p>
+<h3 id="路由的概念"><a href="#路由的概念" class="headerlink" title="路由的概念"></a>路由的概念</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230312232948907.png" alt="image-20230312232948907"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230312233208066.png" alt="image-20230312233208066"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313183322987.png" alt="image-20230313183322987"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313183414404.png" alt="image-20230313183414404"></p>
+<p>不可能出现一个环—代表有多条路径</p>
+<h3 id="路由的原则"><a href="#路由的原则" class="headerlink" title="路由的原则"></a>路由的原则</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313183641333.png" alt="image-20230313183641333"></p>
+<p>注意简单性:求出来的不是最优路径—求最优路径较复杂</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313183918703.png" alt="image-20230313183918703"></p>
+<h3 id="路由算法分类"><a href="#路由算法分类" class="headerlink" title="路由算法分类"></a>路由算法分类</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313184301189.png" alt=""></p>
+<p>全局or分布式,静态or动态</p>
+<p>大多数路由算法是动态的</p>
+<h3 id="链路状态路由选择-link-state-routing"><a href="#链路状态路由选择-link-state-routing" class="headerlink" title="链路状态路由选择(link state routing)"></a>链路状态路由选择(link state routing)</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313190813387.png" alt="image-20230313190813387"></p>
+<p>获得整个网络拓扑后使用迪杰斯特拉算法计算最优路径</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313191013065.png" alt="image-20230313191013065"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313191434140.png" alt="image-20230313191434140"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313191510514.png" alt="image-20230313191510514"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313191528988.png" alt="image-20230313191528988"></p>
+<p>分组通过泛洪的方法传播—可能没完没了</p>
+<p>解决方法:</p>
+<ul>
+<li>存在一个类似TLL的AGE字段</li>
+<li>采用版本号,较旧的分组直接丢弃,不转发</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313191936730.png" alt="image-20230313191936730"></p>
+<p>通过ACK确保分组可靠地泛洪</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313192217654.png" alt="image-20230313192217654"></p>
+<p>Dij算法:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313192616944.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313192854461.png" alt="image-20230313192854461"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313193315920.png" alt="image-20230313193315920"></p>
+<h3 id="距离矢量路由选择-distance-vector-routing"><a href="#距离矢量路由选择-distance-vector-routing" class="headerlink" title="距离矢量路由选择(distance vector routing)"></a>距离矢量路由选择(distance vector routing)</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313203720619.png" alt="image-20230313203720619"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204144581.png" alt="image-20230313204144581"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204258242.png" alt="image-20230313204258242"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204338190.png" alt="image-20230313204338190"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204434615.png" alt="image-20230313204434615"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204805507.png" alt="image-20230313204805507"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313204906573.png" alt="image-20230313204906573"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205029073.png" alt="image-20230313205029073"></p>
+<p>通过不停地迭代,最终收敛到最佳情况</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205245929.png" alt="image-20230313205245929"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205307339.png" alt="image-20230313205307339"></p>
+<p>而LS算法获得整个网络的拓扑信息后,一次即可计算出来最佳路径</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205425372.png" alt="image-20230313205425372"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205633294.png" alt="image-20230313205633294"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205713943.png" alt="image-20230313205713943"></p>
+<p>设置TTL:防止分组被无穷传递</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313205936200.png" alt="image-20230313205936200"></p>
+<p>即B是C传递到A分组的下一跳,故C向B报告时,宣称自己无法到达A,而向D报告时,宣称自己能到达A(即水平方向分裂成两种情况—向B和向其他)</p>
+<p>因此,不会出现B到不了A,反而将分组传递给C的回路情况</p>
+<p>只能减少坏消息传得慢的现象,不能杜绝(仍然传得很慢)</p>
+<h3 id="LS和DV算法的比较"><a href="#LS和DV算法的比较" class="headerlink" title="LS和DV算法的比较"></a>LS和DV算法的比较</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313211139282.png" alt="image-20230313211139282"></p>
+<h2 id="5-3-自治系统内部的路由选择"><a href="#5-3-自治系统内部的路由选择" class="headerlink" title="5.3 自治系统内部的路由选择"></a>5.3 自治系统内部的路由选择</h2><h3 id="RIP-Routing-Information-Protocol-—使用DV算法"><a href="#RIP-Routing-Information-Protocol-—使用DV算法" class="headerlink" title="RIP(Routing Information Protocol)—使用DV算法"></a>RIP(Routing Information Protocol)—使用DV算法</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313214617092.png" alt="image-20230313214617092"></p>
+<p>跳数最大为15,超过15即不可达</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313214810626.png" alt="image-20230313214810626"></p>
+<p>最多25个子网—用于小型网络</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215005911.png" alt="image-20230313215005911"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215116420.png" alt="image-20230313215116420"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215126377.png" alt="image-20230313215126377"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215212557.png" alt="image-20230313215212557"></p>
+<p>注意,RIP协议以应用层实体的方式实现,使用了传输层的服务,实现了网络层的功能</p>
+<h3 id="OSPF-Open-Shortest-Path-First-—使用LS算法"><a href="#OSPF-Open-Shortest-Path-First-—使用LS算法" class="headerlink" title="OSPF(Open Shortest Path First)—使用LS算法"></a>OSPF(Open Shortest Path First)—使用LS算法</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215455953.png" alt="image-20230313215455953"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215711955.png" alt="image-20230313215711955"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313215849080.png" alt="image-20230313215849080"></p>
+<p>将网络分成若干个area,每个area中的分组在area内部进行泛洪</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230313220118697.png" alt="image-20230313220118697"></p>
+<p>边界路由器分饰两角</p>
+<h2 id="5-4-ISP之间的路由选择-BGP"><a href="#5-4-ISP之间的路由选择-BGP" class="headerlink" title="5.4 ISP之间的路由选择: BGP"></a>5.4 ISP之间的路由选择: BGP</h2><h3 id="层次路由"><a href="#层次路由" class="headerlink" title="层次路由"></a>层次路由</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314195431907.png" alt="image-20230314195431907"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314195812689.png" alt="image-20230314195812689"></p>
+<p>每个AS在AS间路由表现为一个或几个点,减少了问题的规模</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314200507928.png" alt="image-20230314200507928"></p>
+<h3 id="互联网AS间路由-BGP"><a href="#互联网AS间路由-BGP" class="headerlink" title="互联网AS间路由: BGP"></a>互联网AS间路由: BGP</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314200710726.png" alt="image-20230314200710726"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314201329930.png" alt=""></p>
+<h3 id=""><a href="#" class="headerlink" title=""></a><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314201749755.png" alt="image-20230314201749755"></h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314202023311.png" alt="image-20230314202023311"></p>
+<p>注意AS间的路由基于策略</p>
+<h3 id="BGP的策略"><a href="#BGP的策略" class="headerlink" title="BGP的策略"></a>BGP的策略</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314202326698.png" alt="image-20230314202326698"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314202407924.png" alt="image-20230314202407924"></p>
+<h3 id="BGP报文"><a href="#BGP报文" class="headerlink" title="BGP报文"></a>BGP报文</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210135840.png" alt="image-20230314210135840"></p>
+<h3 id="BGP-OSPF-转发表表项"><a href="#BGP-OSPF-转发表表项" class="headerlink" title="BGP,OSPF,转发表表项"></a>BGP,OSPF,转发表表项</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210219020.png" alt="image-20230314210219020"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210353908.png" alt="image-20230314210353908"></p>
+<h3 id="BGP路径选择"><a href="#BGP路径选择" class="headerlink" title="BGP路径选择"></a>BGP路径选择</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210521130.png" alt="image-20230314210521130"></p>
+<p>热土豆算法—烫手山芋</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210722094.png" alt="image-20230314210722094"></p>
+<h3 id="BGP-通过路径通告执行策略"><a href="#BGP-通过路径通告执行策略" class="headerlink" title="BGP:通过路径通告执行策略"></a>BGP:通过路径通告执行策略</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314210826711.png" alt="image-20230314210826711"></p>
+<h3 id="内部网关协议和外部网关协议的对比"><a href="#内部网关协议和外部网关协议的对比" class="headerlink" title="内部网关协议和外部网关协议的对比"></a>内部网关协议和外部网关协议的对比</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314211055162.png" alt="image-20230314211055162"></p>
+<h2 id="5-5-SDN控制平面"><a href="#5-5-SDN控制平面" class="headerlink" title="5.5 SDN控制平面"></a>5.5 SDN控制平面</h2><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314213447914.png" alt="image-20230314213447914"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314213458514.png" alt="image-20230314213458514"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314213546780.png" alt="image-20230314213546780"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314213636011.png" alt="image-20230314213636011"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314213832768.png" alt="image-20230314213832768"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314214031794.png" alt=""></p>
+<h3 id="SDN控制器元件"><a href="#SDN控制器元件" class="headerlink" title="SDN控制器元件"></a>SDN控制器元件</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314234539445.png" alt="image-20230314234539445"></p>
+<h3 id="OpenFlow协议"><a href="#OpenFlow协议" class="headerlink" title="OpenFlow协议"></a>OpenFlow协议</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314234626873.png" alt="image-20230314234626873"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314234718913.png" alt="image-20230314234718913"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314234845083.png" alt="image-20230314234845083"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314235033824.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314235135772.png" alt="image-20230314235135772"></p>
+<h3 id="OpenDaylight-ODL-控制器"><a href="#OpenDaylight-ODL-控制器" class="headerlink" title="OpenDaylight(ODL)控制器"></a>OpenDaylight(ODL)控制器</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314235227877.png" alt="image-20230314235227877"></p>
+<h3 id="ONOS控制器"><a href="#ONOS控制器" class="headerlink" title="ONOS控制器"></a>ONOS控制器</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314235247405.png" alt="image-20230314235247405"></p>
+<h3 id="SDN-面临的挑战"><a href="#SDN-面临的挑战" class="headerlink" title="SDN: 面临的挑战"></a>SDN: 面临的挑战</h3><p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230314235322740.png" alt="image-20230314235322740"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/03/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-4/" rel="next" title="计算机网络笔记-4">
+                <i class="fa fa-chevron-left"></i> 计算机网络笔记-4
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2023/03/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-6/" rel="prev" title="计算机网络笔记-6">
+                计算机网络笔记-6 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1496089152&auto=0&height=66"></iframe>
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/">
+              
+                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/dyg-55" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Zhihu</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://tangdouer.cn" title="糖豆儿" target="_blank">糖豆儿</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://gdgao.top/" title="果冻" target="_blank">果冻</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC5%E7%AB%A0-%E7%BD%91%E7%BB%9C%E5%B1%82%E6%8E%A7%E5%88%B6%E5%B9%B3%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">第5章: 网络层控制平面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9%E7%AE%97%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">5.2 路由选择算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.1.1.</span> <span class="nav-text">路由协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.2.</span> <span class="nav-text">路由的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E7%9A%84%E5%8E%9F%E5%88%99"><span class="nav-number">1.1.3.</span> <span class="nav-text">路由的原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E7%AE%97%E6%B3%95%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.4.</span> <span class="nav-text">路由算法分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E8%B7%AF%E7%8A%B6%E6%80%81%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9-link-state-routing"><span class="nav-number">1.1.5.</span> <span class="nav-text">链路状态路由选择(link state routing)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%9D%E7%A6%BB%E7%9F%A2%E9%87%8F%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9-distance-vector-routing"><span class="nav-number">1.1.6.</span> <span class="nav-text">距离矢量路由选择(distance vector routing)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LS%E5%92%8CDV%E7%AE%97%E6%B3%95%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">1.1.7.</span> <span class="nav-text">LS和DV算法的比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-%E8%87%AA%E6%B2%BB%E7%B3%BB%E7%BB%9F%E5%86%85%E9%83%A8%E7%9A%84%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9"><span class="nav-number">1.2.</span> <span class="nav-text">5.3 自治系统内部的路由选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RIP-Routing-Information-Protocol-%E2%80%94%E4%BD%BF%E7%94%A8DV%E7%AE%97%E6%B3%95"><span class="nav-number">1.2.1.</span> <span class="nav-text">RIP(Routing Information Protocol)—使用DV算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OSPF-Open-Shortest-Path-First-%E2%80%94%E4%BD%BF%E7%94%A8LS%E7%AE%97%E6%B3%95"><span class="nav-number">1.2.2.</span> <span class="nav-text">OSPF(Open Shortest Path First)—使用LS算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-ISP%E4%B9%8B%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9-BGP"><span class="nav-number">1.3.</span> <span class="nav-text">5.4 ISP之间的路由选择: BGP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1%E8%B7%AF%E7%94%B1"><span class="nav-number">1.3.1.</span> <span class="nav-text">层次路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%92%E8%81%94%E7%BD%91AS%E9%97%B4%E8%B7%AF%E7%94%B1-BGP"><span class="nav-number">1.3.2.</span> <span class="nav-text">互联网AS间路由: BGP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.3.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BGP%E7%9A%84%E7%AD%96%E7%95%A5"><span class="nav-number">1.3.4.</span> <span class="nav-text">BGP的策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BGP%E6%8A%A5%E6%96%87"><span class="nav-number">1.3.5.</span> <span class="nav-text">BGP报文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BGP-OSPF-%E8%BD%AC%E5%8F%91%E8%A1%A8%E8%A1%A8%E9%A1%B9"><span class="nav-number">1.3.6.</span> <span class="nav-text">BGP,OSPF,转发表表项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BGP%E8%B7%AF%E5%BE%84%E9%80%89%E6%8B%A9"><span class="nav-number">1.3.7.</span> <span class="nav-text">BGP路径选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BGP-%E9%80%9A%E8%BF%87%E8%B7%AF%E5%BE%84%E9%80%9A%E5%91%8A%E6%89%A7%E8%A1%8C%E7%AD%96%E7%95%A5"><span class="nav-number">1.3.8.</span> <span class="nav-text">BGP:通过路径通告执行策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%BD%91%E5%85%B3%E5%8D%8F%E8%AE%AE%E5%92%8C%E5%A4%96%E9%83%A8%E7%BD%91%E5%85%B3%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-number">1.3.9.</span> <span class="nav-text">内部网关协议和外部网关协议的对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-SDN%E6%8E%A7%E5%88%B6%E5%B9%B3%E9%9D%A2"><span class="nav-number">1.4.</span> <span class="nav-text">5.5 SDN控制平面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SDN%E6%8E%A7%E5%88%B6%E5%99%A8%E5%85%83%E4%BB%B6"><span class="nav-number">1.4.1.</span> <span class="nav-text">SDN控制器元件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenFlow%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.4.2.</span> <span class="nav-text">OpenFlow协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenDaylight-ODL-%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="nav-number">1.4.3.</span> <span class="nav-text">OpenDaylight(ODL)控制器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ONOS%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="nav-number">1.4.4.</span> <span class="nav-text">ONOS控制器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SDN-%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%8C%91%E6%88%98"><span class="nav-number">1.4.5.</span> <span class="nav-text">SDN: 面临的挑战</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kanata</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	//下面的HTML-CSS和SVG用于在小屏幕上，数学公式可以自动换行，我测试过后发现无效，但是貌似有人可以。
+	"HTML-CSS": { 
+		linebreaks: { 
+			automatic: true 
+		} 
+	},SVG: {
+		linebreaks: { 
+			automatic: true 
+		}
+	},menuSettings: {
+		zoom: "None"
+	},
+	showMathMenu: false,
+	jax: ["input/TeX","output/CommonHTML"],
+	extensions: ["tex2jax.js"],
+	TeX: {
+		extensions: ["AMSmath.js","AMSsymbols.js"],
+		equationNumbers: {
+			autoNumber: "AMS"
+		}
+	},tex2jax: {
+		inlineMath: [["\\(", "\\)"]],
+		displayMath: [["\\[", "\\]"]]
+	}
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"scale":1.5,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>

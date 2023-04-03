@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/k(180x180).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/k(32x32).png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/k(16x16).png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logok.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="数学," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="学一下Polya,能不能学会就看命了()">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Polya定理">
+<meta property="og:url" content="https://kanata369.github.io/2023/04/02/Polya%E5%AE%9A%E7%90%86/index.html">
+<meta property="og:site_name" content="Kanata&#39;s blog">
+<meta property="og:description" content="学一下Polya,能不能学会就看命了()">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230403174324788.png">
+<meta property="article:published_time" content="2023-04-02T13:14:24.000Z">
+<meta property="article:modified_time" content="2023-04-03T12:33:36.347Z">
+<meta property="article:author" content="Kanata">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230403174324788.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://Kanata369.github.io/2023/04/02/Polya定理/"/>
+
+
+
+
+
+  <title>Polya定理 | Kanata's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kanata's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Kanata369.github.io/2023/04/02/Polya%E5%AE%9A%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kanata's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Polya定理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-04-02T21:14:24+08:00">
+                2023-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">算法学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>学一下Polya,能不能学会就看命了()</p>
+<span id="more"></span>
+<p>来抛一个引入问题:<a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/showproblem.php?pid=6960">https://acm.hdu.edu.cn/showproblem.php?pid=6960</a></p>
+<p>有k个绿珠子,无穷个红珠子和蓝珠子,要串出环状项链,规定相邻珠子不同色,两种项链可以通过旋转得到,则认为是同一种项链,求有多少种项链(T=10,n&lt;=1e6,k&lt;=1e6)</p>
+<p>首先,复习一下置换群的概念,集合S上的所有置换均满足有逆元,有单位元,结合律(a*b*c=a*(b*c)),因此我们称其为一个群,而该群的任意一个子群都称为<strong>置换群</strong></p>
+<p>然后看一下循环置换,顾名思义,就是a1a2a3变成a2a3a1的置换(),我们可以将任意的置换替换成若干个不相交的循环置换的乘积(非常显然,若a1被映射成a2,我们接着去找a2被映射成什么,就形成了一个a1—a2—???….的映射环,其中前一个节点被映射成后一个节点,而该映射环其实就是一个循环置换)</p>
+<p>然后预习一下Burnside定理(对不起我的组合数学老师,这个我是真没学orz)</p>
+<p>总之就是直接上结论了,对所有置换/翻转的方式,<strong>保持不变</strong>的方案数的和,除以所有置换方式的总数</p>
+<p>套入一个经典例子,就是给正方体的6个面染色,对于绕两个对面中心连线180度旋转的方式,显然,中心一共有6/2=3种选择,而保持不变的要求是4个面都相同,则对特定中心的方案数是3^3,最后的方案数是3*3^3,而置换方式要+3</p>
+<p>还需要注意,绕两个对面中心连线180度旋转和90度旋转,视作两种不同的旋转方式(因为二者显然不等价),而270度可以视作90度的旋转的等价(以置换的角度看,123456变成412356,和123456变成234156是等价的),360度同理</p>
+<p>可以这么理解,置换方式即”旋转中心”数,而保持不变的方案数即置换方式*该置换方式下的不变方案数</p>
+<p>最后来到了Polya定理,</p>
+<p>显然,刚才计数保持不变的方案数时,我们可以将面看作(1,2,3,4,5,6),而旋转就是一个置换,我们将该置换拆解成循环置换,设拆解出的循环置换数为x(注意映射到自身,我们视其为长度为1的循环置换),则最终保持不变的方案数就是B^x(B为颜色数),很显然,一个循环置换内,其颜色都必须相同才能保证不变,故本质就是为x个循环置换挑选颜色.</p>
+<p>然而大多数题都不会这么白板,经常会添加附加条件,这时候我们需要在计算不变方案数时下点功夫()</p>
+<p>比如:<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1446">https://www.luogu.com.cn/problem/P1446</a></p>
+<p>由于有个颜色数量的限制,我们在为循环置换挑选颜色时,需要采用背包dp的方式</p>
+<p>回到一开始引入的题目,我们现在可以尝试解决他了.显然,项链旋转可以看作是一个整体位移(长度为0~n-1),故我们知道置换方式一共有n种,假设确定位移长度为x的话,1映射成x+1,x+1映射成2<em>x+1,2\</em>x+1映射3*x+1,易知这个循环置换的长度为n/gcd(n,x).(prove: 假设循环置换的长度为k,则k是最小的正整数满足k*x%n=0,也就是n/gcd(n,x))</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kanata369/blogimage@main/img/image-20230403174324788.png" alt="image-20230403174324788"></p>
+<p>eg:</p>
+<p>假设x为3,则对应的循环置换:</p>
+<ul>
+<li>1-4-7-2-5-8-3-6-1</li>
+</ul>
+<p>假设x为2,则对应的循环置换:</p>
+<ul>
+<li>1-3-5-7-1</li>
+<li>2-4-6-8-2</li>
+</ul>
+<p>假设x为4,则对应的循环置换:</p>
+<ul>
+<li>1-5-1</li>
+<li>2-6-2</li>
+<li>3-7-3</li>
+<li>4-8-4</li>
+</ul>
+<p>假设x为5,则对应的循环置换:</p>
+<ul>
+<li>1-6-3-8-5-2-7-4-1</li>
+</ul>
+<p>可以发现,最终的循环置换个数就是gcd(n,x),而每个循环置换可以用1~gcd(n,x)中的一个数表示(两个数之间的差若小于等于gcd(n,x),则二者不处于一个循环置换内—exgcd相关可得)</p>
+<p>按照Burnside定理,我们将问题化简为,为每一个循环置换决定颜色,而由于题目的两个限制:1.绿色的珠子不超过k个;2.相邻珠子不同色.我们还需要在方案统计上下点功夫</p>
+<p>显然,按照循环置换考虑,可以将绿色珠子不超过k个变成,选择绿色的循环置换数不超过k/(n/gcd(n,x))个,而观察我们得出的循环置换,由于环状结构和同一置换内颜色相同,我们可以将项链视作一个循环节重复n/gcd(n,x)次(即第一个置换—第二个置换—第三个置换—第四个置换—…—第一个置换)</p>
+<p>显然,可以得出一个长度为置换个数的环,那么在这个环中挑选不超过k/(n/gcd(n,x))个绿色珠子的方案数,就等价于原问题中的不变方案数.</p>
+<p>即<script type="math/tex">ans=(\sum_{i=0}^{n-1}\sum_{j=0}^{k/(n/gcd(n,x))} f(gcd(n,x),j)</script></p>
+<p>其中f(n,m)表示在长度为n的环中,挑选m个绿色珠子的合法方案(不需考虑置换等价问题)</p>
+<p>显然,直接计算的复杂度过大,观察式子可以发现枚举i时,对答案计算有意义的仅是gcd(i,n),那么我们可以转为枚举gcd(i,n),计算由多少i满足gcd(i,n)为该值(这部分由欧拉函数就可得出),对每个gcd仅用枚举一次j</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/03/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-6/" rel="next" title="计算机网络笔记-6">
+                <i class="fa fa-chevron-left"></i> 计算机网络笔记-6
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1496089152&auto=0&height=66"></iframe>
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/">
+              
+                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/dyg-55" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Zhihu</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://tangdouer.cn" title="糖豆儿" target="_blank">糖豆儿</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://gdgao.top/" title="果冻" target="_blank">果冻</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kanata</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	//下面的HTML-CSS和SVG用于在小屏幕上，数学公式可以自动换行，我测试过后发现无效，但是貌似有人可以。
+	"HTML-CSS": { 
+		linebreaks: { 
+			automatic: true 
+		} 
+	},SVG: {
+		linebreaks: { 
+			automatic: true 
+		}
+	},menuSettings: {
+		zoom: "None"
+	},
+	showMathMenu: false,
+	jax: ["input/TeX","output/CommonHTML"],
+	extensions: ["tex2jax.js"],
+	TeX: {
+		extensions: ["AMSmath.js","AMSsymbols.js"],
+		equationNumbers: {
+			autoNumber: "AMS"
+		}
+	},tex2jax: {
+		inlineMath: [["\\(", "\\)"]],
+		displayMath: [["\\[", "\\]"]]
+	}
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"scale":1.5,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>
